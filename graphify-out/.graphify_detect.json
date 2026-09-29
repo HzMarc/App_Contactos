@@ -1,0 +1,42 @@
+{
+  "files": {
+    "code": [
+      "C:\\Users\\marco\\AndroidStudioProjects\\Contactos\\build.gradle",
+      "C:\\Users\\marco\\AndroidStudioProjects\\Contactos\\gradlew",
+      "C:\\Users\\marco\\AndroidStudioProjects\\Contactos\\settings.gradle",
+      "C:\\Users\\marco\\AndroidStudioProjects\\Contactos\\app\\build.gradle",
+      "C:\\Users\\marco\\AndroidStudioProjects\\Contactos\\app\\src\\androidTest\\java\\com\\example\\contactos\\ExampleInstrumentedTest.java",
+      "C:\\Users\\marco\\AndroidStudioProjects\\Contactos\\app\\src\\main\\java\\com\\example\\contactos\\ContactosFragment.java",
+      "C:\\Users\\marco\\AndroidStudioProjects\\Contactos\\app\\src\\main\\java\\com\\example\\contactos\\ContactStorage.java",
+      "C:\\Users\\marco\\AndroidStudioProjects\\Contactos\\app\\src\\main\\java\\com\\example\\contactos\\FavoritosFragment.java",
+      "C:\\Users\\marco\\AndroidStudioProjects\\Contactos\\app\\src\\main\\java\\com\\example\\contactos\\fragment_nuevo_contacto.java",
+      "C:\\Users\\marco\\AndroidStudioProjects\\Contactos\\app\\src\\main\\java\\com\\example\\contactos\\GruposFragment.java",
+      "C:\\Users\\marco\\AndroidStudioProjects\\Contactos\\app\\src\\main\\java\\com\\example\\contactos\\MainActivity.java",
+      "C:\\Users\\marco\\AndroidStudioProjects\\Contactos\\app\\src\\main\\java\\com\\example\\contactos\\RecientesFragment.java",
+      "C:\\Users\\marco\\AndroidStudioProjects\\Contactos\\app\\src\\main\\java\\com\\example\\contactos\\ViewPagerAdapter.java",
+      "C:\\Users\\marco\\AndroidStudioProjects\\Contactos\\app\\src\\test\\java\\com\\example\\contactos\\ExampleUnitTest.java"
+    ],
+    "document": [],
+    "paper": [],
+    "image": [
+      "C:\\Users\\marco\\AndroidStudioProjects\\Contactos\\app\\src\\main\\res\\drawable\\steam_avatar.jpg",
+      "C:\\Users\\marco\\AndroidStudioProjects\\Contactos\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp",
+      "C:\\Users\\marco\\AndroidStudioProjects\\Contactos\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp",
+      "C:\\Users\\marco\\AndroidStudioProjects\\Contactos\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp",
+      "C:\\Users\\marco\\AndroidStudioProjects\\Contactos\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp",
+      "C:\\Users\\marco\\AndroidStudioProjects\\Contactos\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp",
+      "C:\\Users\\marco\\AndroidStudioProjects\\Contactos\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp",
+      "C:\\Users\\marco\\AndroidStudioProjects\\Contactos\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp",
+      "C:\\Users\\marco\\AndroidStudioProjects\\Contactos\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp",
+      "C:\\Users\\marco\\AndroidStudioProjects\\Contactos\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp",
+      "C:\\Users\\marco\\AndroidStudioProjects\\Contactos\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    ],
+    "video": []
+  },
+  "total_files": 25,
+  "total_words": 6105,
+  "needs_graph": false,
+  "warning": "Corpus is ~6,105 words - fits in a single context window. You may not need a graph.",
+  "skipped_sensitive": [],
+  "graphifyignore_patterns": 0
+}

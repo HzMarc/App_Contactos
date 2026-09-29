@@ -22,34 +22,6 @@ public class FavoritosFragment extends Fragment {
     private static final String FAVORITES_PREFERENCES = "contact_favorites";
     private static final String FAVORITE_PREFIX = "favorite_";
 
-    private final ContactData[] contacts = {
-            new ContactData(
-                    "alejandro_ramos", "AR", "Alejandro Ramos",
-                    "DevOps • Mercado Libre", "+56 9 7321 0092",
-                    R.drawable.bg_avatar_blue
-            ),
-            new ContactData(
-                    "ana_lucia_prado", "AL", "Ana Lucía Prado",
-                    "Product Lead • NotCo", "+56 9 9124 5531",
-                    R.drawable.bg_avatar_purple
-            ),
-            new ContactData(
-                    "beatriz_silva", "BS", "Beatriz Silva",
-                    "Finanzas • Banco Santander", "+56 9 6554 2189",
-                    R.drawable.bg_avatar_green
-            ),
-            new ContactData(
-                    "carlos_mendoza", "CM", "Carlos Mendoza",
-                    "Diseñador UX • TechStudio", "+56 9 5543 8812",
-                    R.drawable.bg_avatar_blue
-            ),
-            new ContactData(
-                    "diego_herrera", "DH", "Diego Herrera",
-                    "Fotografía Comercial", "+56 9 4432 9988",
-                    R.drawable.bg_avatar_blue
-            )
-    };
-
     @Nullable
     @Override
     public View onCreateView(
@@ -88,7 +60,7 @@ public class FavoritosFragment extends Fragment {
         favoritesLayout.removeAllViews();
 
         SharedPreferences preferences = getFavorites();
-        for (ContactData contact : contacts) {
+        for (StaticDatabase.Contact contact : StaticDatabase.CONTACTS) {
             boolean isFavorite = preferences.getBoolean(
                     FAVORITE_PREFIX + contact.id,
                     isDefaultFavorite(contact.id)
@@ -98,9 +70,27 @@ public class FavoritosFragment extends Fragment {
                 favoritesLayout.addView(createFavoriteCard(contact, favoritesLayout));
             }
         }
+
+        for (ContactStorage.Contact savedContact : ContactStorage.getAll(requireContext())) {
+            boolean isFavorite = preferences.getBoolean(
+                    FAVORITE_PREFIX + savedContact.id,
+                    false
+            );
+            if (isFavorite) {
+                StaticDatabase.Contact contact = new StaticDatabase.Contact(
+                        savedContact.id,
+                        savedContact.getFullName(),
+                        savedContact.jobTitle,
+                        savedContact.company,
+                        savedContact.phone,
+                        R.drawable.bg_avatar_purple
+                );
+                favoritesLayout.addView(createFavoriteCard(contact, favoritesLayout));
+            }
+        }
     }
 
-    private View createQuickAccessCard(@NonNull ContactData contact) {
+    private View createQuickAccessCard(@NonNull StaticDatabase.Contact contact) {
         LinearLayout card = new LinearLayout(requireContext());
         card.setOrientation(LinearLayout.VERTICAL);
         card.setGravity(Gravity.CENTER_HORIZONTAL);
@@ -126,7 +116,7 @@ public class FavoritosFragment extends Fragment {
     }
 
     private View createFavoriteCard(
-            @NonNull ContactData contact,
+            @NonNull StaticDatabase.Contact contact,
             @NonNull ViewGroup parent
     ) {
         LinearLayout card = new LinearLayout(requireContext());
@@ -154,7 +144,7 @@ public class FavoritosFragment extends Fragment {
         detailsParams.setMargins(dp(10), 0, 0, 0);
         details.setLayoutParams(detailsParams);
         details.addView(createNameView(contact.name, 16));
-        details.addView(createDetailView(contact.detail));
+        details.addView(createDetailView(contact.jobTitle + " • " + contact.company));
         details.addView(createDetailView(contact.phone));
         card.addView(details);
 
@@ -177,13 +167,13 @@ public class FavoritosFragment extends Fragment {
     }
 
     private TextView createInitialsView(
-            @NonNull ContactData contact,
+            @NonNull StaticDatabase.Contact contact,
             int size
     ) {
         TextView initials = new TextView(requireContext());
         initials.setLayoutParams(new LinearLayout.LayoutParams(dp(size), dp(size)));
         initials.setGravity(Gravity.CENTER);
-        initials.setText(contact.initials);
+        initials.setText(getInitials(contact.name));
         initials.setTextColor(Color.WHITE);
         initials.setTextSize(14);
         initials.setTypeface(null, android.graphics.Typeface.BOLD);
@@ -235,36 +225,24 @@ public class FavoritosFragment extends Fragment {
     }
 
     private boolean isDefaultFavorite(@NonNull String contactId) {
-        return "beatriz_silva".equals(contactId)
-                || "carlos_mendoza".equals(contactId);
+        for (String favoriteId : StaticDatabase.DEFAULT_FAVORITE_IDS) {
+            if (favoriteId.equals(contactId)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private int dp(int value) {
         return (int) (value * getResources().getDisplayMetrics().density + 0.5f);
     }
 
-    private static class ContactData {
-        private final String id;
-        private final String initials;
-        private final String name;
-        private final String detail;
-        private final String phone;
-        private final int avatarBackground;
-
-        private ContactData(
-                String id,
-                String initials,
-                String name,
-                String detail,
-                String phone,
-                int avatarBackground
-        ) {
-            this.id = id;
-            this.initials = initials;
-            this.name = name;
-            this.detail = detail;
-            this.phone = phone;
-            this.avatarBackground = avatarBackground;
+    private String getInitials(@NonNull String name) {
+        String[] parts = name.trim().split("\\s+");
+        if (parts.length == 1) {
+            return parts[0].substring(0, 1).toUpperCase();
         }
+        return (parts[0].substring(0, 1) + parts[parts.length - 1].substring(0, 1))
+                .toUpperCase();
     }
 }

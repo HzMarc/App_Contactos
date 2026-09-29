@@ -1,0 +1,1996 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "build.gradle",
+      "file_type": "code",
+      "source_file": "build.gradle",
+      "source_location": "L1",
+      "id": "build_gradle"
+    },
+    {
+      "label": "settings.gradle",
+      "file_type": "code",
+      "source_file": "settings.gradle",
+      "source_location": "L1",
+      "id": "settings_gradle"
+    },
+    {
+      "label": "build.gradle",
+      "file_type": "code",
+      "source_file": "app/build.gradle",
+      "source_location": "L1",
+      "id": "app_build_gradle"
+    },
+    {
+      "label": "ExampleInstrumentedTest.java",
+      "file_type": "code",
+      "source_file": "app/src/androidTest/java/com/example/contactos/ExampleInstrumentedTest.java",
+      "source_location": "L1",
+      "id": "app_src_androidtest_java_com_example_contactos_exampleinstrumentedtest_java"
+    },
+    {
+      "label": "ExampleInstrumentedTest",
+      "file_type": "code",
+      "source_file": "app/src/androidTest/java/com/example/contactos/ExampleInstrumentedTest.java",
+      "source_location": "L18",
+      "id": "contactos_exampleinstrumentedtest_exampleinstrumentedtest"
+    },
+    {
+      "label": ".useAppContext()",
+      "file_type": "code",
+      "source_file": "app/src/androidTest/java/com/example/contactos/ExampleInstrumentedTest.java",
+      "source_location": "L20",
+      "id": "contactos_exampleinstrumentedtest_exampleinstrumentedtest_useappcontext"
+    },
+    {
+      "label": "ContactosFragment.java",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_example_contactos_contactosfragment_java"
+    },
+    {
+      "label": "ContactosFragment",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L21",
+      "id": "contactos_contactosfragment_contactosfragment"
+    },
+    {
+      "label": "Fragment",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "fragment"
+    },
+    {
+      "label": ".ContactosFragment()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L26",
+      "id": "contactos_contactosfragment_contactosfragment_contactosfragment"
+    },
+    {
+      "label": ".onCreateView()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L30",
+      "id": "contactos_contactosfragment_contactosfragment_oncreateview"
+    },
+    {
+      "label": ".onViewCreated()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L44",
+      "id": "contactos_contactosfragment_contactosfragment_onviewcreated"
+    },
+    {
+      "label": ".onResume()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L80",
+      "id": "contactos_contactosfragment_contactosfragment_onresume"
+    },
+    {
+      "label": ".renderSavedContacts()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L88",
+      "id": "contactos_contactosfragment_contactosfragment_rendersavedcontacts"
+    },
+    {
+      "label": ".createSavedContactCard()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L121",
+      "id": "contactos_contactosfragment_contactosfragment_createsavedcontactcard"
+    },
+    {
+      "label": ".createContactText()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L182",
+      "id": "contactos_contactosfragment_contactosfragment_createcontacttext"
+    },
+    {
+      "label": ".getInitials()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L200",
+      "id": "contactos_contactosfragment_contactosfragment_getinitials"
+    },
+    {
+      "label": ".dp()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L211",
+      "id": "contactos_contactosfragment_contactosfragment_dp"
+    },
+    {
+      "label": ".collectFavoriteButtons()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L215",
+      "id": "contactos_contactosfragment_contactosfragment_collectfavoritebuttons"
+    },
+    {
+      "label": ".getFavorites()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L229",
+      "id": "contactos_contactosfragment_contactosfragment_getfavorites"
+    },
+    {
+      "label": ".isDefaultFavorite()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L236",
+      "id": "contactos_contactosfragment_contactosfragment_isdefaultfavorite"
+    },
+    {
+      "label": ".updateFavoriteButton()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L241",
+      "id": "contactos_contactosfragment_contactosfragment_updatefavoritebutton"
+    },
+    {
+      "label": "ContactStorage.java",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ContactStorage.java",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_example_contactos_contactstorage_java"
+    },
+    {
+      "label": "ContactStorage",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ContactStorage.java",
+      "source_location": "L11",
+      "id": "contactos_contactstorage_contactstorage"
+    },
+    {
+      "label": ".ContactStorage()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ContactStorage.java",
+      "source_location": "L17",
+      "id": "contactos_contactstorage_contactstorage_contactstorage"
+    },
+    {
+      "label": ".save()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ContactStorage.java",
+      "source_location": "L20",
+      "id": "contactos_contactstorage_contactstorage_save"
+    },
+    {
+      "label": ".getAll()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ContactStorage.java",
+      "source_location": "L39",
+      "id": "contactos_contactstorage_contactstorage_getall"
+    },
+    {
+      "label": ".join()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ContactStorage.java",
+      "source_location": "L69",
+      "id": "contactos_contactstorage_contactstorage_join"
+    },
+    {
+      "label": ".getPreferences()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ContactStorage.java",
+      "source_location": "L80",
+      "id": "contactos_contactstorage_contactstorage_getpreferences"
+    },
+    {
+      "label": "Contact",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ContactStorage.java",
+      "source_location": "L84",
+      "id": "contactos_contactstorage_contact"
+    },
+    {
+      "label": ".Contact()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ContactStorage.java",
+      "source_location": "L93",
+      "id": "contactos_contactstorage_contact_contact"
+    },
+    {
+      "label": ".getFullName()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ContactStorage.java",
+      "source_location": "L111",
+      "id": "contactos_contactstorage_contact_getfullname"
+    },
+    {
+      "label": ".getDetail()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ContactStorage.java",
+      "source_location": "L115",
+      "id": "contactos_contactstorage_contact_getdetail"
+    },
+    {
+      "label": "FavoritosFragment.java",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_example_contactos_favoritosfragment_java"
+    },
+    {
+      "label": "FavoritosFragment",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L20",
+      "id": "contactos_favoritosfragment_favoritosfragment"
+    },
+    {
+      "label": ".onCreateView()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L53",
+      "id": "contactos_favoritosfragment_favoritosfragment_oncreateview"
+    },
+    {
+      "label": ".onViewCreated()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L63",
+      "id": "contactos_favoritosfragment_favoritosfragment_onviewcreated"
+    },
+    {
+      "label": ".onResume()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L76",
+      "id": "contactos_favoritosfragment_favoritosfragment_onresume"
+    },
+    {
+      "label": ".renderFavorites()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L84",
+      "id": "contactos_favoritosfragment_favoritosfragment_renderfavorites"
+    },
+    {
+      "label": ".createQuickAccessCard()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L103",
+      "id": "contactos_favoritosfragment_favoritosfragment_createquickaccesscard"
+    },
+    {
+      "label": ".createFavoriteCard()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L128",
+      "id": "contactos_favoritosfragment_favoritosfragment_createfavoritecard"
+    },
+    {
+      "label": ".createInitialsView()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L179",
+      "id": "contactos_favoritosfragment_favoritosfragment_createinitialsview"
+    },
+    {
+      "label": ".createNameView()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L194",
+      "id": "contactos_favoritosfragment_favoritosfragment_createnameview"
+    },
+    {
+      "label": ".createDetailView()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L208",
+      "id": "contactos_favoritosfragment_favoritosfragment_createdetailview"
+    },
+    {
+      "label": ".createIconButton()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L220",
+      "id": "contactos_favoritosfragment_favoritosfragment_createiconbutton"
+    },
+    {
+      "label": ".getFavorites()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L230",
+      "id": "contactos_favoritosfragment_favoritosfragment_getfavorites"
+    },
+    {
+      "label": ".isDefaultFavorite()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L237",
+      "id": "contactos_favoritosfragment_favoritosfragment_isdefaultfavorite"
+    },
+    {
+      "label": ".dp()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L242",
+      "id": "contactos_favoritosfragment_favoritosfragment_dp"
+    },
+    {
+      "label": "ContactData",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L246",
+      "id": "contactos_favoritosfragment_contactdata"
+    },
+    {
+      "label": ".ContactData()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L254",
+      "id": "contactos_favoritosfragment_contactdata_contactdata"
+    },
+    {
+      "label": "fragment_nuevo_contacto.java",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/fragment_nuevo_contacto.java",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_example_contactos_fragment_nuevo_contacto_java"
+    },
+    {
+      "label": "fragment_nuevo_contacto",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/fragment_nuevo_contacto.java",
+      "source_location": "L16",
+      "id": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto"
+    },
+    {
+      "label": ".fragment_nuevo_contacto()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/fragment_nuevo_contacto.java",
+      "source_location": "L18",
+      "id": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto_fragment_nuevo_contacto"
+    },
+    {
+      "label": ".onCreateView()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/fragment_nuevo_contacto.java",
+      "source_location": "L21",
+      "id": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto_oncreateview"
+    },
+    {
+      "label": ".onViewCreated()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/fragment_nuevo_contacto.java",
+      "source_location": "L31",
+      "id": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto_onviewcreated"
+    },
+    {
+      "label": ".saveContact()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/fragment_nuevo_contacto.java",
+      "source_location": "L41",
+      "id": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto_savecontact"
+    },
+    {
+      "label": ".clearFields()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/fragment_nuevo_contacto.java",
+      "source_location": "L82",
+      "id": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto_clearfields"
+    },
+    {
+      "label": "GruposFragment.java",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/GruposFragment.java",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_example_contactos_gruposfragment_java"
+    },
+    {
+      "label": "GruposFragment",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/GruposFragment.java",
+      "source_location": "L16",
+      "id": "contactos_gruposfragment_gruposfragment"
+    },
+    {
+      "label": ".GruposFragment()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/GruposFragment.java",
+      "source_location": "L27",
+      "id": "contactos_gruposfragment_gruposfragment_gruposfragment"
+    },
+    {
+      "label": ".newInstance()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/GruposFragment.java",
+      "source_location": "L40",
+      "id": "contactos_gruposfragment_gruposfragment_newinstance"
+    },
+    {
+      "label": ".onCreate()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/GruposFragment.java",
+      "source_location": "L49",
+      "id": "contactos_gruposfragment_gruposfragment_oncreate"
+    },
+    {
+      "label": ".onCreateView()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/GruposFragment.java",
+      "source_location": "L58",
+      "id": "contactos_gruposfragment_gruposfragment_oncreateview"
+    },
+    {
+      "label": "MainActivity.java",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/MainActivity.java",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_example_contactos_mainactivity_java"
+    },
+    {
+      "label": "MainActivity",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/MainActivity.java",
+      "source_location": "L13",
+      "id": "contactos_mainactivity_mainactivity"
+    },
+    {
+      "label": "AppCompatActivity",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "appcompatactivity"
+    },
+    {
+      "label": ".onCreate()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/MainActivity.java",
+      "source_location": "L15",
+      "id": "contactos_mainactivity_mainactivity_oncreate"
+    },
+    {
+      "label": ".addTabs()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/MainActivity.java",
+      "source_location": "L70",
+      "id": "contactos_mainactivity_mainactivity_addtabs"
+    },
+    {
+      "label": "RecientesFragment.java",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/RecientesFragment.java",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_example_contactos_recientesfragment_java"
+    },
+    {
+      "label": "RecientesFragment",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/RecientesFragment.java",
+      "source_location": "L16",
+      "id": "contactos_recientesfragment_recientesfragment"
+    },
+    {
+      "label": ".RecientesFragment()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/RecientesFragment.java",
+      "source_location": "L27",
+      "id": "contactos_recientesfragment_recientesfragment_recientesfragment"
+    },
+    {
+      "label": ".newInstance()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/RecientesFragment.java",
+      "source_location": "L40",
+      "id": "contactos_recientesfragment_recientesfragment_newinstance"
+    },
+    {
+      "label": ".onCreate()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/RecientesFragment.java",
+      "source_location": "L49",
+      "id": "contactos_recientesfragment_recientesfragment_oncreate"
+    },
+    {
+      "label": ".onCreateView()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/RecientesFragment.java",
+      "source_location": "L58",
+      "id": "contactos_recientesfragment_recientesfragment_oncreateview"
+    },
+    {
+      "label": "ViewPagerAdapter.java",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ViewPagerAdapter.java",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_example_contactos_viewpageradapter_java"
+    },
+    {
+      "label": "ViewPagerAdapter",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ViewPagerAdapter.java",
+      "source_location": "L8",
+      "id": "contactos_viewpageradapter_viewpageradapter"
+    },
+    {
+      "label": "FragmentStateAdapter",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "fragmentstateadapter"
+    },
+    {
+      "label": ".ViewPagerAdapter()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ViewPagerAdapter.java",
+      "source_location": "L10",
+      "id": "contactos_viewpageradapter_viewpageradapter_viewpageradapter"
+    },
+    {
+      "label": ".createFragment()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ViewPagerAdapter.java",
+      "source_location": "L14",
+      "id": "contactos_viewpageradapter_viewpageradapter_createfragment"
+    },
+    {
+      "label": ".getItemCount()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/contactos/ViewPagerAdapter.java",
+      "source_location": "L34",
+      "id": "contactos_viewpageradapter_viewpageradapter_getitemcount"
+    },
+    {
+      "label": "ExampleUnitTest.java",
+      "file_type": "code",
+      "source_file": "app/src/test/java/com/example/contactos/ExampleUnitTest.java",
+      "source_location": "L1",
+      "id": "app_src_test_java_com_example_contactos_exampleunittest_java"
+    },
+    {
+      "label": "ExampleUnitTest",
+      "file_type": "code",
+      "source_file": "app/src/test/java/com/example/contactos/ExampleUnitTest.java",
+      "source_location": "L12",
+      "id": "contactos_exampleunittest_exampleunittest"
+    },
+    {
+      "label": ".addition_isCorrect()",
+      "file_type": "code",
+      "source_file": "app/src/test/java/com/example/contactos/ExampleUnitTest.java",
+      "source_location": "L13",
+      "id": "contactos_exampleunittest_exampleunittest_addition_iscorrect"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/androidTest/java/com/example/contactos/ExampleInstrumentedTest.java",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_src": "app_src_androidtest_java_com_example_contactos_exampleinstrumentedtest_java",
+      "_tgt": "contactos_exampleinstrumentedtest_exampleinstrumentedtest",
+      "source": "app_src_androidtest_java_com_example_contactos_exampleinstrumentedtest_java",
+      "target": "contactos_exampleinstrumentedtest_exampleinstrumentedtest"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/androidTest/java/com/example/contactos/ExampleInstrumentedTest.java",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_src": "contactos_exampleinstrumentedtest_exampleinstrumentedtest",
+      "_tgt": "contactos_exampleinstrumentedtest_exampleinstrumentedtest_useappcontext",
+      "source": "contactos_exampleinstrumentedtest_exampleinstrumentedtest",
+      "target": "contactos_exampleinstrumentedtest_exampleinstrumentedtest_useappcontext"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_contactos_contactosfragment_java",
+      "_tgt": "fragment",
+      "source": "app_src_main_java_com_example_contactos_contactosfragment_java",
+      "target": "fragment"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_contactos_contactosfragment_java",
+      "_tgt": "contactos_contactosfragment_contactosfragment",
+      "source": "app_src_main_java_com_example_contactos_contactosfragment_java",
+      "target": "contactos_contactosfragment_contactosfragment"
+    },
+    {
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_src": "contactos_contactosfragment_contactosfragment",
+      "_tgt": "fragment",
+      "source": "contactos_contactosfragment_contactosfragment",
+      "target": "fragment"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_src": "contactos_contactosfragment_contactosfragment",
+      "_tgt": "contactos_contactosfragment_contactosfragment_contactosfragment",
+      "source": "contactos_contactosfragment_contactosfragment",
+      "target": "contactos_contactosfragment_contactosfragment_contactosfragment"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_src": "contactos_contactosfragment_contactosfragment",
+      "_tgt": "contactos_contactosfragment_contactosfragment_oncreateview",
+      "source": "contactos_contactosfragment_contactosfragment",
+      "target": "contactos_contactosfragment_contactosfragment_oncreateview"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_src": "contactos_contactosfragment_contactosfragment",
+      "_tgt": "contactos_contactosfragment_contactosfragment_onviewcreated",
+      "source": "contactos_contactosfragment_contactosfragment",
+      "target": "contactos_contactosfragment_contactosfragment_onviewcreated"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L80",
+      "weight": 1.0,
+      "_src": "contactos_contactosfragment_contactosfragment",
+      "_tgt": "contactos_contactosfragment_contactosfragment_onresume",
+      "source": "contactos_contactosfragment_contactosfragment",
+      "target": "contactos_contactosfragment_contactosfragment_onresume"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L88",
+      "weight": 1.0,
+      "_src": "contactos_contactosfragment_contactosfragment",
+      "_tgt": "contactos_contactosfragment_contactosfragment_rendersavedcontacts",
+      "source": "contactos_contactosfragment_contactosfragment",
+      "target": "contactos_contactosfragment_contactosfragment_rendersavedcontacts"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L121",
+      "weight": 1.0,
+      "_src": "contactos_contactosfragment_contactosfragment",
+      "_tgt": "contactos_contactosfragment_contactosfragment_createsavedcontactcard",
+      "source": "contactos_contactosfragment_contactosfragment",
+      "target": "contactos_contactosfragment_contactosfragment_createsavedcontactcard"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L182",
+      "weight": 1.0,
+      "_src": "contactos_contactosfragment_contactosfragment",
+      "_tgt": "contactos_contactosfragment_contactosfragment_createcontacttext",
+      "source": "contactos_contactosfragment_contactosfragment",
+      "target": "contactos_contactosfragment_contactosfragment_createcontacttext"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L200",
+      "weight": 1.0,
+      "_src": "contactos_contactosfragment_contactosfragment",
+      "_tgt": "contactos_contactosfragment_contactosfragment_getinitials",
+      "source": "contactos_contactosfragment_contactosfragment",
+      "target": "contactos_contactosfragment_contactosfragment_getinitials"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L211",
+      "weight": 1.0,
+      "_src": "contactos_contactosfragment_contactosfragment",
+      "_tgt": "contactos_contactosfragment_contactosfragment_dp",
+      "source": "contactos_contactosfragment_contactosfragment",
+      "target": "contactos_contactosfragment_contactosfragment_dp"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L215",
+      "weight": 1.0,
+      "_src": "contactos_contactosfragment_contactosfragment",
+      "_tgt": "contactos_contactosfragment_contactosfragment_collectfavoritebuttons",
+      "source": "contactos_contactosfragment_contactosfragment",
+      "target": "contactos_contactosfragment_contactosfragment_collectfavoritebuttons"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L229",
+      "weight": 1.0,
+      "_src": "contactos_contactosfragment_contactosfragment",
+      "_tgt": "contactos_contactosfragment_contactosfragment_getfavorites",
+      "source": "contactos_contactosfragment_contactosfragment",
+      "target": "contactos_contactosfragment_contactosfragment_getfavorites"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L236",
+      "weight": 1.0,
+      "_src": "contactos_contactosfragment_contactosfragment",
+      "_tgt": "contactos_contactosfragment_contactosfragment_isdefaultfavorite",
+      "source": "contactos_contactosfragment_contactosfragment",
+      "target": "contactos_contactosfragment_contactosfragment_isdefaultfavorite"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L241",
+      "weight": 1.0,
+      "_src": "contactos_contactosfragment_contactosfragment",
+      "_tgt": "contactos_contactosfragment_contactosfragment_updatefavoritebutton",
+      "source": "contactos_contactosfragment_contactosfragment",
+      "target": "contactos_contactosfragment_contactosfragment_updatefavoritebutton"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_contactos_favoritosfragment_java",
+      "_tgt": "fragment",
+      "source": "fragment",
+      "target": "app_src_main_java_com_example_contactos_favoritosfragment_java"
+    },
+    {
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment",
+      "_tgt": "fragment",
+      "source": "fragment",
+      "target": "contactos_favoritosfragment_favoritosfragment"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/fragment_nuevo_contacto.java",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_contactos_fragment_nuevo_contacto_java",
+      "_tgt": "fragment",
+      "source": "fragment",
+      "target": "app_src_main_java_com_example_contactos_fragment_nuevo_contacto_java"
+    },
+    {
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/fragment_nuevo_contacto.java",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_src": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto",
+      "_tgt": "fragment",
+      "source": "fragment",
+      "target": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/GruposFragment.java",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_contactos_gruposfragment_java",
+      "_tgt": "fragment",
+      "source": "fragment",
+      "target": "app_src_main_java_com_example_contactos_gruposfragment_java"
+    },
+    {
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/GruposFragment.java",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_src": "contactos_gruposfragment_gruposfragment",
+      "_tgt": "fragment",
+      "source": "fragment",
+      "target": "contactos_gruposfragment_gruposfragment"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/RecientesFragment.java",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_contactos_recientesfragment_java",
+      "_tgt": "fragment",
+      "source": "fragment",
+      "target": "app_src_main_java_com_example_contactos_recientesfragment_java"
+    },
+    {
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/RecientesFragment.java",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_src": "contactos_recientesfragment_recientesfragment",
+      "_tgt": "fragment",
+      "source": "fragment",
+      "target": "contactos_recientesfragment_recientesfragment"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ViewPagerAdapter.java",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_contactos_viewpageradapter_java",
+      "_tgt": "fragment",
+      "source": "fragment",
+      "target": "app_src_main_java_com_example_contactos_viewpageradapter_java"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_src": "contactos_contactosfragment_contactosfragment_onviewcreated",
+      "_tgt": "contactos_contactosfragment_contactosfragment_collectfavoritebuttons",
+      "source": "contactos_contactosfragment_contactosfragment_onviewcreated",
+      "target": "contactos_contactosfragment_contactosfragment_collectfavoritebuttons"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L56",
+      "weight": 1.0,
+      "_src": "contactos_contactosfragment_contactosfragment_onviewcreated",
+      "_tgt": "contactos_contactosfragment_contactosfragment_isdefaultfavorite",
+      "source": "contactos_contactosfragment_contactosfragment_onviewcreated",
+      "target": "contactos_contactosfragment_contactosfragment_isdefaultfavorite"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L57",
+      "weight": 1.0,
+      "_src": "contactos_contactosfragment_contactosfragment_onviewcreated",
+      "_tgt": "contactos_contactosfragment_contactosfragment_updatefavoritebutton",
+      "source": "contactos_contactosfragment_contactosfragment_onviewcreated",
+      "target": "contactos_contactosfragment_contactosfragment_updatefavoritebutton"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L59",
+      "weight": 1.0,
+      "_src": "contactos_contactosfragment_contactosfragment_onviewcreated",
+      "_tgt": "contactos_contactosfragment_contactosfragment_getfavorites",
+      "source": "contactos_contactosfragment_contactosfragment_onviewcreated",
+      "target": "contactos_contactosfragment_contactosfragment_getfavorites"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L77",
+      "weight": 1.0,
+      "_src": "contactos_contactosfragment_contactosfragment_onviewcreated",
+      "_tgt": "contactos_contactosfragment_contactosfragment_rendersavedcontacts",
+      "source": "contactos_contactosfragment_contactosfragment_onviewcreated",
+      "target": "contactos_contactosfragment_contactosfragment_rendersavedcontacts"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L84",
+      "weight": 1.0,
+      "_src": "contactos_contactosfragment_contactosfragment_onresume",
+      "_tgt": "contactos_contactosfragment_contactosfragment_rendersavedcontacts",
+      "source": "contactos_contactosfragment_contactosfragment_onresume",
+      "target": "contactos_contactosfragment_contactosfragment_rendersavedcontacts"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L107",
+      "weight": 1.0,
+      "_src": "contactos_contactosfragment_contactosfragment_rendersavedcontacts",
+      "_tgt": "contactos_contactosfragment_contactosfragment_dp",
+      "source": "contactos_contactosfragment_contactosfragment_rendersavedcontacts",
+      "target": "contactos_contactosfragment_contactosfragment_dp"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L117",
+      "weight": 1.0,
+      "_src": "contactos_contactosfragment_contactosfragment_rendersavedcontacts",
+      "_tgt": "contactos_contactosfragment_contactosfragment_createsavedcontactcard",
+      "source": "contactos_contactosfragment_contactosfragment_rendersavedcontacts",
+      "target": "contactos_contactosfragment_contactosfragment_createsavedcontactcard"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L98",
+      "weight": 1.0,
+      "_src": "contactos_contactosfragment_contactosfragment_rendersavedcontacts",
+      "_tgt": "contactos_contactstorage_contactstorage_getall",
+      "source": "contactos_contactosfragment_contactosfragment_rendersavedcontacts",
+      "target": "contactos_contactstorage_contactstorage_getall"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L127",
+      "weight": 1.0,
+      "_src": "contactos_contactosfragment_contactosfragment_createsavedcontactcard",
+      "_tgt": "contactos_contactosfragment_contactosfragment_dp",
+      "source": "contactos_contactosfragment_contactosfragment_createsavedcontactcard",
+      "target": "contactos_contactosfragment_contactosfragment_dp"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L137",
+      "weight": 1.0,
+      "_src": "contactos_contactosfragment_contactosfragment_createsavedcontactcard",
+      "_tgt": "contactos_contactosfragment_contactosfragment_getinitials",
+      "source": "contactos_contactosfragment_contactosfragment_createsavedcontactcard",
+      "target": "contactos_contactosfragment_contactosfragment_getinitials"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L153",
+      "weight": 1.0,
+      "_src": "contactos_contactosfragment_contactosfragment_createsavedcontactcard",
+      "_tgt": "contactos_contactosfragment_contactosfragment_createcontacttext",
+      "source": "contactos_contactosfragment_contactosfragment_createsavedcontactcard",
+      "target": "contactos_contactosfragment_contactosfragment_createcontacttext"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L164",
+      "weight": 1.0,
+      "_src": "contactos_contactosfragment_contactosfragment_createsavedcontactcard",
+      "_tgt": "contactos_contactosfragment_contactosfragment_updatefavoritebutton",
+      "source": "contactos_contactosfragment_contactosfragment_createsavedcontactcard",
+      "target": "contactos_contactosfragment_contactosfragment_updatefavoritebutton"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L166",
+      "weight": 1.0,
+      "_src": "contactos_contactosfragment_contactosfragment_createsavedcontactcard",
+      "_tgt": "contactos_contactosfragment_contactosfragment_getfavorites",
+      "source": "contactos_contactosfragment_contactosfragment_createsavedcontactcard",
+      "target": "contactos_contactosfragment_contactosfragment_getfavorites"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L153",
+      "weight": 1.0,
+      "_src": "contactos_contactosfragment_contactosfragment_createsavedcontactcard",
+      "_tgt": "contactos_contactstorage_contact_getfullname",
+      "source": "contactos_contactosfragment_contactosfragment_createsavedcontactcard",
+      "target": "contactos_contactstorage_contact_getfullname"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/example/contactos/ContactosFragment.java",
+      "source_location": "L154",
+      "weight": 1.0,
+      "_src": "contactos_contactosfragment_contactosfragment_createsavedcontactcard",
+      "_tgt": "contactos_contactstorage_contact_getdetail",
+      "source": "contactos_contactosfragment_contactosfragment_createsavedcontactcard",
+      "target": "contactos_contactstorage_contact_getdetail"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactStorage.java",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_contactos_contactstorage_java",
+      "_tgt": "contactos_contactstorage_contactstorage",
+      "source": "app_src_main_java_com_example_contactos_contactstorage_java",
+      "target": "contactos_contactstorage_contactstorage"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactStorage.java",
+      "source_location": "L84",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_contactos_contactstorage_java",
+      "_tgt": "contactos_contactstorage_contact",
+      "source": "app_src_main_java_com_example_contactos_contactstorage_java",
+      "target": "contactos_contactstorage_contact"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactStorage.java",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_src": "contactos_contactstorage_contactstorage",
+      "_tgt": "contactos_contactstorage_contactstorage_contactstorage",
+      "source": "contactos_contactstorage_contactstorage",
+      "target": "contactos_contactstorage_contactstorage_contactstorage"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactStorage.java",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_src": "contactos_contactstorage_contactstorage",
+      "_tgt": "contactos_contactstorage_contactstorage_save",
+      "source": "contactos_contactstorage_contactstorage",
+      "target": "contactos_contactstorage_contactstorage_save"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactStorage.java",
+      "source_location": "L39",
+      "weight": 1.0,
+      "_src": "contactos_contactstorage_contactstorage",
+      "_tgt": "contactos_contactstorage_contactstorage_getall",
+      "source": "contactos_contactstorage_contactstorage",
+      "target": "contactos_contactstorage_contactstorage_getall"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactStorage.java",
+      "source_location": "L69",
+      "weight": 1.0,
+      "_src": "contactos_contactstorage_contactstorage",
+      "_tgt": "contactos_contactstorage_contactstorage_join",
+      "source": "contactos_contactstorage_contactstorage",
+      "target": "contactos_contactstorage_contactstorage_join"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactStorage.java",
+      "source_location": "L80",
+      "weight": 1.0,
+      "_src": "contactos_contactstorage_contactstorage",
+      "_tgt": "contactos_contactstorage_contactstorage_getpreferences",
+      "source": "contactos_contactstorage_contactstorage",
+      "target": "contactos_contactstorage_contactstorage_getpreferences"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactStorage.java",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_src": "contactos_contactstorage_contactstorage_save",
+      "_tgt": "contactos_contactstorage_contactstorage_getpreferences",
+      "source": "contactos_contactstorage_contactstorage_save",
+      "target": "contactos_contactstorage_contactstorage_getpreferences"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactStorage.java",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_src": "contactos_contactstorage_contactstorage_save",
+      "_tgt": "contactos_contactstorage_contactstorage_join",
+      "source": "contactos_contactstorage_contactstorage_save",
+      "target": "contactos_contactstorage_contactstorage_join"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/example/contactos/fragment_nuevo_contacto.java",
+      "source_location": "L64",
+      "weight": 1.0,
+      "_src": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto_savecontact",
+      "_tgt": "contactos_contactstorage_contactstorage_save",
+      "source": "contactos_contactstorage_contactstorage_save",
+      "target": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto_savecontact"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactStorage.java",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_src": "contactos_contactstorage_contactstorage_getall",
+      "_tgt": "contactos_contactstorage_contactstorage_getpreferences",
+      "source": "contactos_contactstorage_contactstorage_getall",
+      "target": "contactos_contactstorage_contactstorage_getpreferences"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactStorage.java",
+      "source_location": "L93",
+      "weight": 1.0,
+      "_src": "contactos_contactstorage_contact",
+      "_tgt": "contactos_contactstorage_contact_contact",
+      "source": "contactos_contactstorage_contact",
+      "target": "contactos_contactstorage_contact_contact"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactStorage.java",
+      "source_location": "L111",
+      "weight": 1.0,
+      "_src": "contactos_contactstorage_contact",
+      "_tgt": "contactos_contactstorage_contact_getfullname",
+      "source": "contactos_contactstorage_contact",
+      "target": "contactos_contactstorage_contact_getfullname"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ContactStorage.java",
+      "source_location": "L115",
+      "weight": 1.0,
+      "_src": "contactos_contactstorage_contact",
+      "_tgt": "contactos_contactstorage_contact_getdetail",
+      "source": "contactos_contactstorage_contact",
+      "target": "contactos_contactstorage_contact_getdetail"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_contactos_favoritosfragment_java",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment",
+      "source": "app_src_main_java_com_example_contactos_favoritosfragment_java",
+      "target": "contactos_favoritosfragment_favoritosfragment"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L246",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_contactos_favoritosfragment_java",
+      "_tgt": "contactos_favoritosfragment_contactdata",
+      "source": "app_src_main_java_com_example_contactos_favoritosfragment_java",
+      "target": "contactos_favoritosfragment_contactdata"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L53",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_oncreateview",
+      "source": "contactos_favoritosfragment_favoritosfragment",
+      "target": "contactos_favoritosfragment_favoritosfragment_oncreateview"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L63",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_onviewcreated",
+      "source": "contactos_favoritosfragment_favoritosfragment",
+      "target": "contactos_favoritosfragment_favoritosfragment_onviewcreated"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L76",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_onresume",
+      "source": "contactos_favoritosfragment_favoritosfragment",
+      "target": "contactos_favoritosfragment_favoritosfragment_onresume"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L84",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_renderfavorites",
+      "source": "contactos_favoritosfragment_favoritosfragment",
+      "target": "contactos_favoritosfragment_favoritosfragment_renderfavorites"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L103",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_createquickaccesscard",
+      "source": "contactos_favoritosfragment_favoritosfragment",
+      "target": "contactos_favoritosfragment_favoritosfragment_createquickaccesscard"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L128",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_createfavoritecard",
+      "source": "contactos_favoritosfragment_favoritosfragment",
+      "target": "contactos_favoritosfragment_favoritosfragment_createfavoritecard"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L179",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_createinitialsview",
+      "source": "contactos_favoritosfragment_favoritosfragment",
+      "target": "contactos_favoritosfragment_favoritosfragment_createinitialsview"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L194",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_createnameview",
+      "source": "contactos_favoritosfragment_favoritosfragment",
+      "target": "contactos_favoritosfragment_favoritosfragment_createnameview"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L208",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_createdetailview",
+      "source": "contactos_favoritosfragment_favoritosfragment",
+      "target": "contactos_favoritosfragment_favoritosfragment_createdetailview"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L220",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_createiconbutton",
+      "source": "contactos_favoritosfragment_favoritosfragment",
+      "target": "contactos_favoritosfragment_favoritosfragment_createiconbutton"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L230",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_getfavorites",
+      "source": "contactos_favoritosfragment_favoritosfragment",
+      "target": "contactos_favoritosfragment_favoritosfragment_getfavorites"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L237",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_isdefaultfavorite",
+      "source": "contactos_favoritosfragment_favoritosfragment",
+      "target": "contactos_favoritosfragment_favoritosfragment_isdefaultfavorite"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L242",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_dp",
+      "source": "contactos_favoritosfragment_favoritosfragment",
+      "target": "contactos_favoritosfragment_favoritosfragment_dp"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L73",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment_onviewcreated",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_renderfavorites",
+      "source": "contactos_favoritosfragment_favoritosfragment_onviewcreated",
+      "target": "contactos_favoritosfragment_favoritosfragment_renderfavorites"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L80",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment_onresume",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_renderfavorites",
+      "source": "contactos_favoritosfragment_favoritosfragment_onresume",
+      "target": "contactos_favoritosfragment_favoritosfragment_renderfavorites"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L90",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment_renderfavorites",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_getfavorites",
+      "source": "contactos_favoritosfragment_favoritosfragment_renderfavorites",
+      "target": "contactos_favoritosfragment_favoritosfragment_getfavorites"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L94",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment_renderfavorites",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_isdefaultfavorite",
+      "source": "contactos_favoritosfragment_favoritosfragment_renderfavorites",
+      "target": "contactos_favoritosfragment_favoritosfragment_isdefaultfavorite"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L97",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment_renderfavorites",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_createquickaccesscard",
+      "source": "contactos_favoritosfragment_favoritosfragment_renderfavorites",
+      "target": "contactos_favoritosfragment_favoritosfragment_createquickaccesscard"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L169",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment_createfavoritecard",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_renderfavorites",
+      "source": "contactos_favoritosfragment_favoritosfragment_renderfavorites",
+      "target": "contactos_favoritosfragment_favoritosfragment_createfavoritecard"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L107",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment_createquickaccesscard",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_dp",
+      "source": "contactos_favoritosfragment_favoritosfragment_createquickaccesscard",
+      "target": "contactos_favoritosfragment_favoritosfragment_dp"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L117",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment_createquickaccesscard",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_createinitialsview",
+      "source": "contactos_favoritosfragment_favoritosfragment_createquickaccesscard",
+      "target": "contactos_favoritosfragment_favoritosfragment_createinitialsview"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L118",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment_createquickaccesscard",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_createnameview",
+      "source": "contactos_favoritosfragment_favoritosfragment_createquickaccesscard",
+      "target": "contactos_favoritosfragment_favoritosfragment_createnameview"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L121",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment_createquickaccesscard",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_createiconbutton",
+      "source": "contactos_favoritosfragment_favoritosfragment_createquickaccesscard",
+      "target": "contactos_favoritosfragment_favoritosfragment_createiconbutton"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L135",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment_createfavoritecard",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_dp",
+      "source": "contactos_favoritosfragment_favoritosfragment_createfavoritecard",
+      "target": "contactos_favoritosfragment_favoritosfragment_dp"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L145",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment_createfavoritecard",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_createinitialsview",
+      "source": "contactos_favoritosfragment_favoritosfragment_createfavoritecard",
+      "target": "contactos_favoritosfragment_favoritosfragment_createinitialsview"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L156",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment_createfavoritecard",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_createnameview",
+      "source": "contactos_favoritosfragment_favoritosfragment_createfavoritecard",
+      "target": "contactos_favoritosfragment_favoritosfragment_createnameview"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L157",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment_createfavoritecard",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_createdetailview",
+      "source": "contactos_favoritosfragment_favoritosfragment_createfavoritecard",
+      "target": "contactos_favoritosfragment_favoritosfragment_createdetailview"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L161",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment_createfavoritecard",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_createiconbutton",
+      "source": "contactos_favoritosfragment_favoritosfragment_createfavoritecard",
+      "target": "contactos_favoritosfragment_favoritosfragment_createiconbutton"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L166",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment_createfavoritecard",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_getfavorites",
+      "source": "contactos_favoritosfragment_favoritosfragment_createfavoritecard",
+      "target": "contactos_favoritosfragment_favoritosfragment_getfavorites"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L184",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment_createinitialsview",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_dp",
+      "source": "contactos_favoritosfragment_favoritosfragment_createinitialsview",
+      "target": "contactos_favoritosfragment_favoritosfragment_dp"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L222",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_favoritosfragment_createiconbutton",
+      "_tgt": "contactos_favoritosfragment_favoritosfragment_dp",
+      "source": "contactos_favoritosfragment_favoritosfragment_createiconbutton",
+      "target": "contactos_favoritosfragment_favoritosfragment_dp"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+      "source_location": "L254",
+      "weight": 1.0,
+      "_src": "contactos_favoritosfragment_contactdata",
+      "_tgt": "contactos_favoritosfragment_contactdata_contactdata",
+      "source": "contactos_favoritosfragment_contactdata",
+      "target": "contactos_favoritosfragment_contactdata_contactdata"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/fragment_nuevo_contacto.java",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_contactos_fragment_nuevo_contacto_java",
+      "_tgt": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto",
+      "source": "app_src_main_java_com_example_contactos_fragment_nuevo_contacto_java",
+      "target": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/fragment_nuevo_contacto.java",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_src": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto",
+      "_tgt": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto_fragment_nuevo_contacto",
+      "source": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto",
+      "target": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto_fragment_nuevo_contacto"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/fragment_nuevo_contacto.java",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_src": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto",
+      "_tgt": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto_oncreateview",
+      "source": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto",
+      "target": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto_oncreateview"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/fragment_nuevo_contacto.java",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_src": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto",
+      "_tgt": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto_onviewcreated",
+      "source": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto",
+      "target": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto_onviewcreated"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/fragment_nuevo_contacto.java",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_src": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto",
+      "_tgt": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto_savecontact",
+      "source": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto",
+      "target": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto_savecontact"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/fragment_nuevo_contacto.java",
+      "source_location": "L82",
+      "weight": 1.0,
+      "_src": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto",
+      "_tgt": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto_clearfields",
+      "source": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto",
+      "target": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto_clearfields"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/fragment_nuevo_contacto.java",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_src": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto_onviewcreated",
+      "_tgt": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto_savecontact",
+      "source": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto_onviewcreated",
+      "target": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto_savecontact"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/fragment_nuevo_contacto.java",
+      "source_location": "L79",
+      "weight": 1.0,
+      "_src": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto_savecontact",
+      "_tgt": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto_clearfields",
+      "source": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto_savecontact",
+      "target": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto_clearfields"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/GruposFragment.java",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_contactos_gruposfragment_java",
+      "_tgt": "contactos_gruposfragment_gruposfragment",
+      "source": "app_src_main_java_com_example_contactos_gruposfragment_java",
+      "target": "contactos_gruposfragment_gruposfragment"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/GruposFragment.java",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_src": "contactos_gruposfragment_gruposfragment",
+      "_tgt": "contactos_gruposfragment_gruposfragment_gruposfragment",
+      "source": "contactos_gruposfragment_gruposfragment",
+      "target": "contactos_gruposfragment_gruposfragment_gruposfragment"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/GruposFragment.java",
+      "source_location": "L40",
+      "weight": 1.0,
+      "_src": "contactos_gruposfragment_gruposfragment",
+      "_tgt": "contactos_gruposfragment_gruposfragment_newinstance",
+      "source": "contactos_gruposfragment_gruposfragment",
+      "target": "contactos_gruposfragment_gruposfragment_newinstance"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/GruposFragment.java",
+      "source_location": "L49",
+      "weight": 1.0,
+      "_src": "contactos_gruposfragment_gruposfragment",
+      "_tgt": "contactos_gruposfragment_gruposfragment_oncreate",
+      "source": "contactos_gruposfragment_gruposfragment",
+      "target": "contactos_gruposfragment_gruposfragment_oncreate"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/GruposFragment.java",
+      "source_location": "L58",
+      "weight": 1.0,
+      "_src": "contactos_gruposfragment_gruposfragment",
+      "_tgt": "contactos_gruposfragment_gruposfragment_oncreateview",
+      "source": "contactos_gruposfragment_gruposfragment",
+      "target": "contactos_gruposfragment_gruposfragment_oncreateview"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/MainActivity.java",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_contactos_mainactivity_java",
+      "_tgt": "appcompatactivity",
+      "source": "app_src_main_java_com_example_contactos_mainactivity_java",
+      "target": "appcompatactivity"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/MainActivity.java",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_contactos_mainactivity_java",
+      "_tgt": "contactos_mainactivity_mainactivity",
+      "source": "app_src_main_java_com_example_contactos_mainactivity_java",
+      "target": "contactos_mainactivity_mainactivity"
+    },
+    {
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/MainActivity.java",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_src": "contactos_mainactivity_mainactivity",
+      "_tgt": "appcompatactivity",
+      "source": "contactos_mainactivity_mainactivity",
+      "target": "appcompatactivity"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/MainActivity.java",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_src": "contactos_mainactivity_mainactivity",
+      "_tgt": "contactos_mainactivity_mainactivity_oncreate",
+      "source": "contactos_mainactivity_mainactivity",
+      "target": "contactos_mainactivity_mainactivity_oncreate"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/MainActivity.java",
+      "source_location": "L70",
+      "weight": 1.0,
+      "_src": "contactos_mainactivity_mainactivity",
+      "_tgt": "contactos_mainactivity_mainactivity_addtabs",
+      "source": "contactos_mainactivity_mainactivity",
+      "target": "contactos_mainactivity_mainactivity_addtabs"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/MainActivity.java",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_src": "contactos_mainactivity_mainactivity_oncreate",
+      "_tgt": "contactos_mainactivity_mainactivity_addtabs",
+      "source": "contactos_mainactivity_mainactivity_oncreate",
+      "target": "contactos_mainactivity_mainactivity_addtabs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/RecientesFragment.java",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_contactos_recientesfragment_java",
+      "_tgt": "contactos_recientesfragment_recientesfragment",
+      "source": "app_src_main_java_com_example_contactos_recientesfragment_java",
+      "target": "contactos_recientesfragment_recientesfragment"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/RecientesFragment.java",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_src": "contactos_recientesfragment_recientesfragment",
+      "_tgt": "contactos_recientesfragment_recientesfragment_recientesfragment",
+      "source": "contactos_recientesfragment_recientesfragment",
+      "target": "contactos_recientesfragment_recientesfragment_recientesfragment"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/RecientesFragment.java",
+      "source_location": "L40",
+      "weight": 1.0,
+      "_src": "contactos_recientesfragment_recientesfragment",
+      "_tgt": "contactos_recientesfragment_recientesfragment_newinstance",
+      "source": "contactos_recientesfragment_recientesfragment",
+      "target": "contactos_recientesfragment_recientesfragment_newinstance"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/RecientesFragment.java",
+      "source_location": "L49",
+      "weight": 1.0,
+      "_src": "contactos_recientesfragment_recientesfragment",
+      "_tgt": "contactos_recientesfragment_recientesfragment_oncreate",
+      "source": "contactos_recientesfragment_recientesfragment",
+      "target": "contactos_recientesfragment_recientesfragment_oncreate"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/RecientesFragment.java",
+      "source_location": "L58",
+      "weight": 1.0,
+      "_src": "contactos_recientesfragment_recientesfragment",
+      "_tgt": "contactos_recientesfragment_recientesfragment_oncreateview",
+      "source": "contactos_recientesfragment_recientesfragment",
+      "target": "contactos_recientesfragment_recientesfragment_oncreateview"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ViewPagerAdapter.java",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_contactos_viewpageradapter_java",
+      "_tgt": "fragmentstateadapter",
+      "source": "app_src_main_java_com_example_contactos_viewpageradapter_java",
+      "target": "fragmentstateadapter"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ViewPagerAdapter.java",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_contactos_viewpageradapter_java",
+      "_tgt": "contactos_viewpageradapter_viewpageradapter",
+      "source": "app_src_main_java_com_example_contactos_viewpageradapter_java",
+      "target": "contactos_viewpageradapter_viewpageradapter"
+    },
+    {
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ViewPagerAdapter.java",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_src": "contactos_viewpageradapter_viewpageradapter",
+      "_tgt": "fragmentstateadapter",
+      "source": "contactos_viewpageradapter_viewpageradapter",
+      "target": "fragmentstateadapter"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ViewPagerAdapter.java",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_src": "contactos_viewpageradapter_viewpageradapter",
+      "_tgt": "contactos_viewpageradapter_viewpageradapter_viewpageradapter",
+      "source": "contactos_viewpageradapter_viewpageradapter",
+      "target": "contactos_viewpageradapter_viewpageradapter_viewpageradapter"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ViewPagerAdapter.java",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_src": "contactos_viewpageradapter_viewpageradapter",
+      "_tgt": "contactos_viewpageradapter_viewpageradapter_createfragment",
+      "source": "contactos_viewpageradapter_viewpageradapter",
+      "target": "contactos_viewpageradapter_viewpageradapter_createfragment"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/contactos/ViewPagerAdapter.java",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_src": "contactos_viewpageradapter_viewpageradapter",
+      "_tgt": "contactos_viewpageradapter_viewpageradapter_getitemcount",
+      "source": "contactos_viewpageradapter_viewpageradapter",
+      "target": "contactos_viewpageradapter_viewpageradapter_getitemcount"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/test/java/com/example/contactos/ExampleUnitTest.java",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_src": "app_src_test_java_com_example_contactos_exampleunittest_java",
+      "_tgt": "contactos_exampleunittest_exampleunittest",
+      "source": "app_src_test_java_com_example_contactos_exampleunittest_java",
+      "target": "contactos_exampleunittest_exampleunittest"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/test/java/com/example/contactos/ExampleUnitTest.java",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_src": "contactos_exampleunittest_exampleunittest",
+      "_tgt": "contactos_exampleunittest_exampleunittest_addition_iscorrect",
+      "source": "contactos_exampleunittest_exampleunittest",
+      "target": "contactos_exampleunittest_exampleunittest_addition_iscorrect"
+    }
+  ]
+}

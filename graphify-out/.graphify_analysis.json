@@ -1,0 +1,199 @@
+{
+  "communities": {
+    "0": [
+      "app_src_main_java_com_example_contactos_contactosfragment_java",
+      "app_src_main_java_com_example_contactos_favoritosfragment_java",
+      "app_src_main_java_com_example_contactos_gruposfragment_java",
+      "app_src_main_java_com_example_contactos_recientesfragment_java",
+      "contactos_favoritosfragment_contactdata",
+      "contactos_favoritosfragment_contactdata_contactdata",
+      "contactos_gruposfragment_gruposfragment",
+      "contactos_gruposfragment_gruposfragment_gruposfragment",
+      "contactos_gruposfragment_gruposfragment_newinstance",
+      "contactos_gruposfragment_gruposfragment_oncreate",
+      "contactos_gruposfragment_gruposfragment_oncreateview",
+      "contactos_recientesfragment_recientesfragment",
+      "contactos_recientesfragment_recientesfragment_newinstance",
+      "contactos_recientesfragment_recientesfragment_oncreate",
+      "contactos_recientesfragment_recientesfragment_oncreateview",
+      "contactos_recientesfragment_recientesfragment_recientesfragment",
+      "fragment"
+    ],
+    "1": [
+      "contactos_contactosfragment_contactosfragment",
+      "contactos_contactosfragment_contactosfragment_collectfavoritebuttons",
+      "contactos_contactosfragment_contactosfragment_contactosfragment",
+      "contactos_contactosfragment_contactosfragment_createcontacttext",
+      "contactos_contactosfragment_contactosfragment_createsavedcontactcard",
+      "contactos_contactosfragment_contactosfragment_dp",
+      "contactos_contactosfragment_contactosfragment_getfavorites",
+      "contactos_contactosfragment_contactosfragment_getinitials",
+      "contactos_contactosfragment_contactosfragment_isdefaultfavorite",
+      "contactos_contactosfragment_contactosfragment_oncreateview",
+      "contactos_contactosfragment_contactosfragment_onresume",
+      "contactos_contactosfragment_contactosfragment_onviewcreated",
+      "contactos_contactosfragment_contactosfragment_rendersavedcontacts",
+      "contactos_contactosfragment_contactosfragment_updatefavoritebutton"
+    ],
+    "2": [
+      "contactos_favoritosfragment_favoritosfragment",
+      "contactos_favoritosfragment_favoritosfragment_createdetailview",
+      "contactos_favoritosfragment_favoritosfragment_createfavoritecard",
+      "contactos_favoritosfragment_favoritosfragment_createiconbutton",
+      "contactos_favoritosfragment_favoritosfragment_createinitialsview",
+      "contactos_favoritosfragment_favoritosfragment_createnameview",
+      "contactos_favoritosfragment_favoritosfragment_createquickaccesscard",
+      "contactos_favoritosfragment_favoritosfragment_dp",
+      "contactos_favoritosfragment_favoritosfragment_getfavorites",
+      "contactos_favoritosfragment_favoritosfragment_isdefaultfavorite",
+      "contactos_favoritosfragment_favoritosfragment_oncreateview",
+      "contactos_favoritosfragment_favoritosfragment_onresume",
+      "contactos_favoritosfragment_favoritosfragment_onviewcreated",
+      "contactos_favoritosfragment_favoritosfragment_renderfavorites"
+    ],
+    "3": [
+      "app_src_main_java_com_example_contactos_contactstorage_java",
+      "contactos_contactstorage_contact",
+      "contactos_contactstorage_contact_contact",
+      "contactos_contactstorage_contact_getdetail",
+      "contactos_contactstorage_contact_getfullname",
+      "contactos_contactstorage_contactstorage",
+      "contactos_contactstorage_contactstorage_contactstorage",
+      "contactos_contactstorage_contactstorage_getall",
+      "contactos_contactstorage_contactstorage_getpreferences",
+      "contactos_contactstorage_contactstorage_join",
+      "contactos_contactstorage_contactstorage_save"
+    ],
+    "4": [
+      "app_src_main_java_com_example_contactos_fragment_nuevo_contacto_java",
+      "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto",
+      "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto_clearfields",
+      "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto_fragment_nuevo_contacto",
+      "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto_oncreateview",
+      "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto_onviewcreated",
+      "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto_savecontact"
+    ],
+    "5": [
+      "app_src_main_java_com_example_contactos_viewpageradapter_java",
+      "contactos_viewpageradapter_viewpageradapter",
+      "contactos_viewpageradapter_viewpageradapter_createfragment",
+      "contactos_viewpageradapter_viewpageradapter_getitemcount",
+      "contactos_viewpageradapter_viewpageradapter_viewpageradapter",
+      "fragmentstateadapter"
+    ],
+    "6": [
+      "app_src_main_java_com_example_contactos_mainactivity_java",
+      "appcompatactivity",
+      "contactos_mainactivity_mainactivity",
+      "contactos_mainactivity_mainactivity_addtabs",
+      "contactos_mainactivity_mainactivity_oncreate"
+    ],
+    "7": [
+      "app_src_androidtest_java_com_example_contactos_exampleinstrumentedtest_java",
+      "contactos_exampleinstrumentedtest_exampleinstrumentedtest",
+      "contactos_exampleinstrumentedtest_exampleinstrumentedtest_useappcontext"
+    ],
+    "8": [
+      "app_src_test_java_com_example_contactos_exampleunittest_java",
+      "contactos_exampleunittest_exampleunittest",
+      "contactos_exampleunittest_exampleunittest_addition_iscorrect"
+    ],
+    "9": [
+      "build_gradle"
+    ],
+    "10": [
+      "settings_gradle"
+    ],
+    "11": [
+      "app_build_gradle"
+    ]
+  },
+  "cohesion": {},
+  "god_nodes": [
+    {
+      "id": "contactos_contactosfragment_contactosfragment",
+      "label": "ContactosFragment",
+      "degree": 15
+    },
+    {
+      "id": "contactos_favoritosfragment_favoritosfragment",
+      "label": "FavoritosFragment",
+      "degree": 15
+    },
+    {
+      "id": "contactos_fragment_nuevo_contacto_fragment_nuevo_contacto",
+      "label": "fragment_nuevo_contacto",
+      "degree": 7
+    },
+    {
+      "id": "contactos_contactstorage_contactstorage",
+      "label": "ContactStorage",
+      "degree": 6
+    },
+    {
+      "id": "contactos_gruposfragment_gruposfragment",
+      "label": "GruposFragment",
+      "degree": 6
+    },
+    {
+      "id": "contactos_recientesfragment_recientesfragment",
+      "label": "RecientesFragment",
+      "degree": 6
+    },
+    {
+      "id": "contactos_viewpageradapter_viewpageradapter",
+      "label": "ViewPagerAdapter",
+      "degree": 5
+    },
+    {
+      "id": "contactos_contactstorage_contact",
+      "label": "Contact",
+      "degree": 4
+    },
+    {
+      "id": "contactos_mainactivity_mainactivity",
+      "label": "MainActivity",
+      "degree": 4
+    },
+    {
+      "id": "contactos_exampleinstrumentedtest_exampleinstrumentedtest",
+      "label": "ExampleInstrumentedTest",
+      "degree": 2
+    }
+  ],
+  "surprises": [
+    {
+      "source": "ContactosFragment",
+      "target": "Fragment",
+      "source_files": [
+        "app/src/main/java/com/example/contactos/ContactosFragment.java",
+        ""
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "extends",
+      "note": "Bridges community 1 \u2192 community 0"
+    },
+    {
+      "source": "FavoritosFragment",
+      "target": "Fragment",
+      "source_files": [
+        "app/src/main/java/com/example/contactos/FavoritosFragment.java",
+        ""
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "extends",
+      "note": "Bridges community 0 \u2192 community 2"
+    },
+    {
+      "source": "fragment_nuevo_contacto",
+      "target": "Fragment",
+      "source_files": [
+        "app/src/main/java/com/example/contactos/fragment_nuevo_contacto.java",
+        ""
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "extends",
+      "note": "Bridges community 0 \u2192 community 4"
+    }
+  ]
+}

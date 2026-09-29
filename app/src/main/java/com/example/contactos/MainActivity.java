@@ -1,16 +1,30 @@
 package com.example.contactos;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
+
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
+
+    private static final int TAB_CONTACTOS = 0;
+    private static final int TAB_FAVORITOS = 1;
+    private static final int TAB_NUEVO = 2;
+    private static final int TAB_RECIENTES = 3;
+    private static final int TAB_GRUPOS = 4;
+
+    private ViewPager2 viewPager;
+    private View formContainer;
+    private View topBar;
+    private TabLayout tabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,14 +33,22 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        ViewPager2 viewPager = findViewById(R.id.viewpager);
+        viewPager = findViewById(R.id.viewpager);
+        formContainer = findViewById(R.id.form_container);
+        topBar = findViewById(R.id.top_bar);
+        tabLayout = findViewById(R.id.tabLayout);
+
         viewPager.setAdapter(new ViewPagerAdapter(this));
-        TabLayout tabLayout = findViewById(R.id.tabLayout);
         addTabs(tabLayout);
+        configureNavigation();
+        configureInsets();
+    }
+
+    private void configureNavigation() {
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition(), true);
+                selectTab(tab.getPosition());
             }
 
             @Override
@@ -35,19 +57,105 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition(), true);
+                selectTab(tab.getPosition());
             }
         });
+
         viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
             public void onPageSelected(int position) {
-                TabLayout.Tab tab = tabLayout.getTabAt(position);
+                if (formContainer.getVisibility() == View.VISIBLE) {
+                    return;
+                }
+
+                TabLayout.Tab tab = tabLayout.getTabAt(positionToTab(position));
                 if (tab != null && !tab.isSelected()) {
                     tab.select();
                 }
             }
         });
+    }
 
+    private void selectTab(int tabPosition) {
+        if (tabPosition == TAB_NUEVO) {
+            showNewContactForm();
+            return;
+        }
+
+        showPage(tabToPosition(tabPosition));
+    }
+
+    private void showPage(int pagePosition) {
+        topBar.setVisibility(View.VISIBLE);
+        formContainer.setVisibility(View.GONE);
+        viewPager.setVisibility(View.VISIBLE);
+        if (viewPager.getCurrentItem() != pagePosition) {
+            viewPager.setCurrentItem(pagePosition, true);
+        }
+    }
+
+    private void showNewContactForm() {
+        topBar.setVisibility(View.GONE);
+        viewPager.setVisibility(View.GONE);
+        formContainer.setVisibility(View.VISIBLE);
+
+        Fragment current = getSupportFragmentManager()
+                .findFragmentById(R.id.form_container);
+        if (!(current instanceof fragment_nuevo_contacto)) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.form_container, new fragment_nuevo_contacto())
+                    .commit();
+        }
+    }
+
+    public void showContacts() {
+        TabLayout.Tab contactsTab = tabLayout.getTabAt(TAB_CONTACTOS);
+        if (contactsTab != null) {
+            contactsTab.select();
+        }
+    }
+
+    private int tabToPosition(int tabPosition) {
+        switch (tabPosition) {
+            case TAB_CONTACTOS:
+                return 0;
+            case TAB_FAVORITOS:
+                return 1;
+            case TAB_RECIENTES:
+                return 2;
+            case TAB_GRUPOS:
+                return 3;
+            default:
+                return 0;
+        }
+    }
+
+    private int positionToTab(int pagePosition) {
+        switch (pagePosition) {
+            case 0:
+                return TAB_CONTACTOS;
+            case 1:
+                return TAB_FAVORITOS;
+            case 2:
+                return TAB_RECIENTES;
+            case 3:
+                return TAB_GRUPOS;
+            default:
+                return TAB_CONTACTOS;
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (formContainer.getVisibility() == View.VISIBLE) {
+            tabLayout.getTabAt(TAB_CONTACTOS).select();
+            return;
+        }
+        super.onBackPressed();
+    }
+
+    private void configureInsets() {
         ViewCompat.setOnApplyWindowInsetsListener(
                 findViewById(R.id.main),
                 (view, insets) -> {
