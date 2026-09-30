@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.util.Locale;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -29,6 +30,18 @@ public class GruposFragment extends Fragment {
             Color.rgb(91, 75, 180),
             Color.rgb(216, 119, 47)
     };
+    private String currentQuery = "";
+
+    public void filterByQuery(String query) {
+
+        currentQuery = query == null
+                ? ""
+                : query.trim().toLowerCase(Locale.ROOT);
+
+        if (getView() != null) {
+            renderGroups(getView());
+        }
+    }
 
     @Nullable
     @Override
@@ -64,11 +77,62 @@ public class GruposFragment extends Fragment {
         groupsLayout.removeAllViews();
 
         List<GroupStorage.Group> groups = GroupStorage.getAll(requireContext());
-        for (int index = 0; index < groups.size(); index++) {
-            groupsLayout.addView(createGroupCard(groups.get(index), index));
+        int visibleIndex = 0;
+
+        for (GroupStorage.Group group : groups) {
+
+            if (!matchesGroup(group)) {
+                continue;
+            }
+
+            groupsLayout.addView(
+                    createGroupCard(
+                            group,
+                            visibleIndex
+                    )
+            );
+
+            visibleIndex++;
+        }
+        if (visibleIndex == 0) {
+
+            TextView empty = createText(
+                    "No se encontraron grupos",
+                    15,
+                    false,
+                    Color.rgb(119, 119, 128)
+            );
+
+            empty.setGravity(Gravity.CENTER);
+
+            empty.setPadding(
+                    0,
+                    dp(50),
+                    0,
+                    dp(50)
+            );
+
+            groupsLayout.addView(empty);
         }
     }
 
+    private boolean matchesGroup(
+            @NonNull GroupStorage.Group group
+    ) {
+
+        if (currentQuery.isEmpty()) {
+            return true;
+        }
+
+        String searchableText =
+                group.name + " "
+                        + group.description + " "
+                        + group.contactCount;
+
+        return searchableText
+                .toLowerCase(Locale.ROOT)
+                .contains(currentQuery);
+    }
     @NonNull
     private View createGroupCard(
             @NonNull GroupStorage.Group group,

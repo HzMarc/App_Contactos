@@ -13,8 +13,27 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import java.util.Locale;
 
 public class RecientesFragment extends Fragment {
+
+    private String currentQuery = "";
+
+    private boolean showingMissedOnly = false;
+
+    public void filterByQuery(String query) {
+
+        currentQuery = query == null
+                ? ""
+                : query.trim().toLowerCase(Locale.ROOT);
+
+        if (getView() != null) {
+            renderCalls(
+                    getView(),
+                    showingMissedOnly
+            );
+        }
+    }
 
     @Nullable
     @Override
@@ -37,45 +56,135 @@ public class RecientesFragment extends Fragment {
         TextView missedButton = view.findViewById(R.id.btn_perdidas);
 
         allButton.setOnClickListener(clickedView -> {
-            updateFilterButtons(allButton, missedButton, true);
-            renderCalls(view, false);
+
+            showingMissedOnly = false;
+
+            updateFilterButtons(
+                    allButton,
+                    missedButton,
+                    true
+            );
+
+            renderCalls(
+                    view,
+                    showingMissedOnly
+            );
         });
         missedButton.setOnClickListener(clickedView -> {
-            updateFilterButtons(allButton, missedButton, false);
-            renderCalls(view, true);
+
+            showingMissedOnly = true;
+
+            updateFilterButtons(
+                    allButton,
+                    missedButton,
+                    false
+            );
+
+            renderCalls(
+                    view,
+                    showingMissedOnly
+            );
         });
 
-        renderCalls(view, false);
-    }
+        renderCalls(view, showingMissedOnly);    }
 
-    private void renderCalls(@NonNull View root, boolean missedOnly) {
-        LinearLayout callsLayout = root.findViewById(R.id.layout_recientes);
+    private void renderCalls(
+            @NonNull View root,
+            boolean missedOnly
+    ) {
+
+        LinearLayout callsLayout =
+                root.findViewById(R.id.layout_recientes);
+
         callsLayout.removeAllViews();
 
         String currentSection = "";
-        int index = 0;
-        for (StaticDatabase.RecentCall call : StaticDatabase.RECENT_CALLS) {
+
+        boolean hasResults = false;
+
+
+        for (
+                int index = 0;
+                index < StaticDatabase.RECENT_CALLS.length;
+                index++
+        ) {
+
+            StaticDatabase.RecentCall call =
+                    StaticDatabase.RECENT_CALLS[index];
+
+
             if (missedOnly && !call.missed) {
-                index++;
                 continue;
             }
 
-            String section = index < 3 ? "Hoy" : "Ayer";
+
+            if (!matchesCall(call)) {
+                continue;
+            }
+
+
+            String section =
+                    index < 3
+                            ? "Hoy"
+                            : "Ayer";
+
+
             if (!section.equals(currentSection)) {
-                callsLayout.addView(createSectionTitle(section));
+
+                callsLayout.addView(
+                        createSectionTitle(section)
+                );
+
                 currentSection = section;
             }
 
-            callsLayout.addView(createCallCard(call));
-            index++;
+
+            callsLayout.addView(
+                    createCallCard(call)
+            );
+
+            hasResults = true;
         }
 
-        if (missedOnly && !hasMissedCalls()) {
-            TextView emptyState = createText("No tienes llamadas perdidas", 15, false);
+
+        if (!hasResults) {
+
+            TextView emptyState = createText(
+                    "No se encontraron llamadas",
+                    15,
+                    false
+            );
+
             emptyState.setGravity(Gravity.CENTER);
-            emptyState.setPadding(0, dp(40), 0, dp(40));
+
+            emptyState.setPadding(
+                    0,
+                    dp(40),
+                    0,
+                    dp(40)
+            );
+
             callsLayout.addView(emptyState);
         }
+    }
+
+    private boolean matchesCall(
+            @NonNull StaticDatabase.RecentCall call
+    ) {
+
+        if (currentQuery.isEmpty()) {
+            return true;
+        }
+
+        String searchableText =
+                call.name + " "
+                        + call.type + " "
+                        + call.time + " "
+                        + call.duration;
+
+        return searchableText
+                .toLowerCase(Locale.ROOT)
+                .contains(currentQuery);
     }
 
     @NonNull

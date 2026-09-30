@@ -26,6 +26,7 @@ public class ContactosFragment extends Fragment {
 
     private static final String FAVORITES_PREFERENCES = "contact_favorites";
     private static final String FAVORITE_PREFIX = "favorite_";
+    private String currentQuery = "";
 
     @Nullable
     @Override
@@ -55,44 +56,107 @@ public class ContactosFragment extends Fragment {
     }
 
     private void renderContacts(@NonNull View root) {
-        LinearLayout contactsLayout = root.findViewById(R.id.layout_lista_contactos);
+
+        LinearLayout contactsLayout =
+                root.findViewById(R.id.layout_lista_contactos);
+
         contactsLayout.removeAllViews();
 
         List<ContactStorage.Contact> savedContacts =
                 ContactStorage.getAll(requireContext());
+
+
         for (char letter = 'A'; letter <= 'Z'; letter++) {
+
             String initial = String.valueOf(letter);
-            boolean hasStatic = false;
+
+            boolean hasResults = false;
+
+
             for (StaticDatabase.Contact contact : StaticDatabase.CONTACTS) {
-                if (contact.name.substring(0, 1).equalsIgnoreCase(initial)) {
-                    hasStatic = true;
+
+                if (contact.name.substring(0, 1)
+                        .equalsIgnoreCase(initial)
+                        && matchesContact(contact)) {
+
+                    hasResults = true;
                     break;
                 }
             }
 
-            boolean hasSaved = false;
-            for (ContactStorage.Contact contact : savedContacts) {
-                if (contact.getFullName().substring(0, 1).equalsIgnoreCase(initial)) {
-                    hasSaved = true;
-                    break;
+
+            if (!hasResults) {
+
+                for (ContactStorage.Contact contact : savedContacts) {
+
+                    if (contact.getFullName()
+                            .substring(0, 1)
+                            .equalsIgnoreCase(initial)
+                            && matchesSavedContact(contact)) {
+
+                        hasResults = true;
+                        break;
+                    }
                 }
             }
 
-            if (!hasStatic && !hasSaved) {
+
+            if (!hasResults) {
                 continue;
             }
 
-            contactsLayout.addView(createSectionTitle(initial));
+
+            contactsLayout.addView(
+                    createSectionTitle(initial)
+            );
+
+
             for (StaticDatabase.Contact contact : StaticDatabase.CONTACTS) {
-                if (contact.name.substring(0, 1).equalsIgnoreCase(initial)) {
-                    contactsLayout.addView(createContactCard(contact));
+
+                if (contact.name
+                        .substring(0, 1)
+                        .equalsIgnoreCase(initial)
+                        && matchesContact(contact)) {
+
+                    contactsLayout.addView(
+                            createContactCard(contact)
+                    );
                 }
             }
+
+
             for (ContactStorage.Contact contact : savedContacts) {
-                if (contact.getFullName().substring(0, 1).equalsIgnoreCase(initial)) {
-                    contactsLayout.addView(createSavedContactCard(contact));
+
+                if (contact.getFullName()
+                        .substring(0, 1)
+                        .equalsIgnoreCase(initial)
+                        && matchesSavedContact(contact)) {
+
+                    contactsLayout.addView(
+                            createSavedContactCard(contact)
+                    );
                 }
             }
+        }
+
+
+        if (contactsLayout.getChildCount() == 0) {
+
+            TextView empty = createContactText(
+                    "No se encontraron contactos",
+                    15,
+                    true
+            );
+
+            empty.setGravity(Gravity.CENTER);
+            empty.setPadding(
+                    0,
+                    dp(50),
+                    0,
+                    dp(50)
+            );
+
+            contactsLayout.addView(empty);
         }
     }
 
@@ -274,6 +338,56 @@ public class ContactosFragment extends Fragment {
                         ? "Quitar de favoritos"
                         : "Agregar a favoritos"
         );
+    }
+
+    public void filterByQuery(String query) {
+
+        currentQuery = query == null
+                ? ""
+                : query.trim().toLowerCase(Locale.ROOT);
+
+        if (getView() != null) {
+            renderContacts(getView());
+        }
+    }
+
+    private boolean matchesContact(
+            @NonNull StaticDatabase.Contact contact
+    ) {
+
+        if (currentQuery.isEmpty()) {
+            return true;
+        }
+
+        String searchableText =
+                contact.name + " "
+                        + contact.jobTitle + " "
+                        + contact.company + " "
+                        + contact.phone;
+
+        return searchableText
+                .toLowerCase(Locale.ROOT)
+                .contains(currentQuery);
+    }
+
+    private boolean matchesSavedContact(
+            @NonNull ContactStorage.Contact contact
+    ) {
+
+        if (currentQuery.isEmpty()) {
+            return true;
+        }
+
+        String searchableText =
+                contact.getFullName() + " "
+                        + contact.jobTitle + " "
+                        + contact.company + " "
+                        + contact.phone + " "
+                        + contact.email;
+
+        return searchableText
+                .toLowerCase(Locale.ROOT)
+                .contains(currentQuery);
     }
 
 }

@@ -10,6 +10,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
+import android.widget.SearchView;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private View formContainer;
     private View topBar;
     private TabLayout tabLayout;
+    private SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +39,12 @@ public class MainActivity extends AppCompatActivity {
         formContainer = findViewById(R.id.form_container);
         topBar = findViewById(R.id.top_bar);
         tabLayout = findViewById(R.id.tabLayout);
+        searchView = findViewById(R.id.searchView);
 
         viewPager.setAdapter(new ViewPagerAdapter(this));
         addTabs(tabLayout);
         configureNavigation();
+        configureSearch();
         configureInsets();
     }
 
@@ -64,14 +68,22 @@ public class MainActivity extends AppCompatActivity {
         viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
             public void onPageSelected(int position) {
+
                 if (formContainer.getVisibility() == View.VISIBLE) {
                     return;
                 }
 
                 TabLayout.Tab tab = tabLayout.getTabAt(positionToTab(position));
+
                 if (tab != null && !tab.isSelected()) {
                     tab.select();
                 }
+
+                updateSearchHint(position);
+
+                viewPager.post(() ->
+                        applySearch(searchView.getQuery().toString())
+                );
             }
         });
     }
@@ -173,6 +185,71 @@ public class MainActivity extends AppCompatActivity {
                     return insets;
                 }
         );
+    }
+
+    private void configureSearch() {
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                applySearch(query);
+                searchView.clearFocus();
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                applySearch(newText);
+                return true;
+            }
+        });
+    }
+
+    private void applySearch(String query) {
+
+        int pagePosition = viewPager.getCurrentItem();
+
+        Fragment fragment = getSupportFragmentManager()
+                .findFragmentByTag("f" + pagePosition);
+
+        if (fragment instanceof ContactosFragment) {
+            ((ContactosFragment) fragment).filterByQuery(query);
+        }
+
+        if (fragment instanceof FavoritosFragment) {
+            ((FavoritosFragment) fragment).filterByQuery(query);
+        }
+
+        if (fragment instanceof RecientesFragment) {
+            ((RecientesFragment) fragment).filterByQuery(query);
+        }
+
+        if (fragment instanceof GruposFragment) {
+            ((GruposFragment) fragment).filterByQuery(query);
+        }
+    }
+
+    private void updateSearchHint(int position) {
+
+        switch (position) {
+
+            case 0:
+                searchView.setQueryHint("Buscar contactos...");
+                break;
+
+            case 1:
+                searchView.setQueryHint("Buscar favoritos...");
+                break;
+
+            case 2:
+                searchView.setQueryHint("Buscar llamadas...");
+                break;
+
+            case 3:
+                searchView.setQueryHint("Buscar grupos...");
+                break;
+        }
     }
 
     private void addTabs(TabLayout tabLayout) {

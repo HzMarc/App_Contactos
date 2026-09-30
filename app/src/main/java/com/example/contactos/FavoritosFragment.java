@@ -16,11 +16,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
+import java.util.Locale;
 
 public class FavoritosFragment extends Fragment {
 
     private static final String FAVORITES_PREFERENCES = "contact_favorites";
     private static final String FAVORITE_PREFIX = "favorite_";
+    private String currentQuery = "";
 
     @Nullable
     @Override
@@ -52,42 +54,124 @@ public class FavoritosFragment extends Fragment {
             renderFavorites(getView());
         }
     }
+    public void filterByQuery(String query) {
+
+        currentQuery = query == null
+                ? ""
+                : query.trim().toLowerCase(Locale.ROOT);
+
+        if (getView() != null) {
+            renderFavorites(getView());
+        }
+    }
 
     private void renderFavorites(@NonNull View root) {
-        LinearLayout quickAccess = root.findViewById(R.id.layout_acceso_rapido);
-        LinearLayout favoritesLayout = root.findViewById(R.id.layout_favoritos);
+
+        LinearLayout quickAccess =
+                root.findViewById(R.id.layout_acceso_rapido);
+
+        LinearLayout favoritesLayout =
+                root.findViewById(R.id.layout_favoritos);
+
         quickAccess.removeAllViews();
         favoritesLayout.removeAllViews();
 
+
         SharedPreferences preferences = getFavorites();
+
+
         for (StaticDatabase.Contact contact : StaticDatabase.CONTACTS) {
+
             boolean isFavorite = preferences.getBoolean(
                     FAVORITE_PREFIX + contact.id,
                     isDefaultFavorite(contact.id)
             );
-            if (isFavorite) {
-                quickAccess.addView(createQuickAccessCard(contact));
-                favoritesLayout.addView(createFavoriteCard(contact, favoritesLayout));
+
+            if (isFavorite && matchesContact(contact)) {
+
+                quickAccess.addView(
+                        createQuickAccessCard(contact)
+                );
+
+                favoritesLayout.addView(
+                        createFavoriteCard(
+                                contact,
+                                favoritesLayout
+                        )
+                );
             }
         }
 
-        for (ContactStorage.Contact savedContact : ContactStorage.getAll(requireContext())) {
+
+        for (ContactStorage.Contact savedContact :
+                ContactStorage.getAll(requireContext())) {
+
             boolean isFavorite = preferences.getBoolean(
                     FAVORITE_PREFIX + savedContact.id,
                     false
             );
+
             if (isFavorite) {
-                StaticDatabase.Contact contact = new StaticDatabase.Contact(
-                        savedContact.id,
-                        savedContact.getFullName(),
-                        savedContact.jobTitle,
-                        savedContact.company,
-                        savedContact.phone,
-                        R.drawable.bg_avatar_purple
+
+                StaticDatabase.Contact contact =
+                        new StaticDatabase.Contact(
+                                savedContact.id,
+                                savedContact.getFullName(),
+                                savedContact.jobTitle,
+                                savedContact.company,
+                                savedContact.phone,
+                                R.drawable.bg_avatar_purple
+                        );
+
+                if (!matchesContact(contact)) {
+                    continue;
+                }
+
+                favoritesLayout.addView(
+                        createFavoriteCard(
+                                contact,
+                                favoritesLayout
+                        )
                 );
-                favoritesLayout.addView(createFavoriteCard(contact, favoritesLayout));
             }
         }
+
+
+        if (favoritesLayout.getChildCount() == 0) {
+
+            TextView emptyView =
+                    createDetailView("No se encontraron favoritos");
+
+            emptyView.setGravity(Gravity.CENTER);
+
+            emptyView.setPadding(
+                    0,
+                    dp(40),
+                    0,
+                    dp(40)
+            );
+
+            favoritesLayout.addView(emptyView);
+        }
+    }
+
+    private boolean matchesContact(
+            @NonNull StaticDatabase.Contact contact
+    ) {
+
+        if (currentQuery.isEmpty()) {
+            return true;
+        }
+
+        String searchableText =
+                contact.name + " "
+                        + contact.jobTitle + " "
+                        + contact.company + " "
+                        + contact.phone;
+
+        return searchableText
+                .toLowerCase(Locale.ROOT)
+                .contains(currentQuery);
     }
 
     private View createQuickAccessCard(@NonNull StaticDatabase.Contact contact) {
