@@ -1,6 +1,7 @@
 package com.example.contactos;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -77,6 +78,7 @@ public class ContactosFragment extends Fragment {
 
                 if (contact.name.substring(0, 1)
                         .equalsIgnoreCase(initial)
+                        && !StaticDatabase.isDeleted(requireContext(), contact.id)
                         && matchesContact(contact)) {
 
                     hasResults = true;
@@ -116,10 +118,13 @@ public class ContactosFragment extends Fragment {
                 if (contact.name
                         .substring(0, 1)
                         .equalsIgnoreCase(initial)
+                        && !StaticDatabase.isDeleted(requireContext(), contact.id)
                         && matchesContact(contact)) {
 
                     contactsLayout.addView(
-                            createContactCard(contact)
+                            createContactCard(
+                                    StaticDatabase.resolve(requireContext(), contact)
+                            )
                     );
                 }
             }
@@ -209,17 +214,18 @@ public class ContactosFragment extends Fragment {
         details.setLayoutParams(detailsParams);
         details.setOrientation(LinearLayout.VERTICAL);
         details.addView(createContactText(contact.name, 16, true));
-        details.addView(createContactText(
-                contact.jobTitle + " • " + contact.company,
-                12,
-                false
-        ));
+        String contactDetail = contact.jobTitle + " • " + contact.company;
+        if (StaticDatabase.isBlocked(requireContext(), contact.id)) {
+            contactDetail += " • Bloqueado";
+        }
+        details.addView(createContactText(contactDetail, 12, false));
         details.addView(createContactText(contact.phone, 11, false));
         card.addView(details);
 
         card.addView(createFavoriteButton(contact.id, isDefaultFavorite(contact.id)));
         card.addView(createActionIcon(R.drawable.ic_phone, "Llamar a " + contact.name));
         card.addView(createActionIcon(R.drawable.ic_message, "Enviar mensaje a " + contact.name));
+        card.setOnClickListener(clickedView -> openContactDetails(contact.id));
         return card;
     }
 
@@ -273,7 +279,14 @@ public class ContactosFragment extends Fragment {
         );
         View card = createContactCard(data);
         card.setTag("saved_contact");
+        card.setOnClickListener(clickedView -> openContactDetails(contact.id));
         return card;
+    }
+
+    private void openContactDetails(@NonNull String contactId) {
+        Intent intent = new Intent(requireContext(), DetalleContactoActivity.class);
+        intent.putExtra(DetalleContactoActivity.EXTRA_CONTACT_ID, contactId);
+        startActivity(intent);
     }
 
     @NonNull

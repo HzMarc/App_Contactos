@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F7FF"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#F8F7FF"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <ImageButton
+            android:id="@+id/btn_detalle_atras"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_action_circle_small"
+            android:contentDescription="Regresar"
+            android:padding="10dp"
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Detalle del contacto"
+            android:textColor="#171522"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btn_detalle_editar"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_action_circle_small"
+            android:backgroundTint="#E4E0FF"
+            android:contentDescription="Editar contacto"
+            android:padding="10dp"
+            android:src="@drawable/ic_edit" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="28dp">
+
+            <TextView
+                android:id="@+id/detail_avatar"
+                android:layout_width="112dp"
+                android:layout_height="112dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="14dp"
+                android:gravity="center"
+                android:textColor="#FFFFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/detail_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:textColor="#10101A"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/detail_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#413D4E"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/detail_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_search_view"
+                android:paddingStart="14dp"
+                android:paddingTop="7dp"
+                android:paddingEnd="14dp"
+                android:paddingBottom="7dp"
+                android:text="● Disponible"
+                android:textColor="#3525CD"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/bg_contact_card"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:id="@+id/btn_detalle_llamar"
+                    style="@style/ContactAction"
+                    android:contentDescription="Llamar">
+                    <ImageView
+                        style="@style/ContactActionIcon"
+                        android:src="@drawable/ic_phone" />
+                    <TextView style="@style/ContactActionText" android:text="Llamar" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/btn_detalle_mensaje"
+                    style="@style/ContactAction"
+                    android:contentDescription="Mensaje">
+                    <ImageView
+                        style="@style/ContactActionIcon"
+                        android:src="@drawable/ic_message" />
+                    <TextView style="@style/ContactActionText" android:text="Mensaje" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/btn_detalle_video"
+                    style="@style/ContactAction"
+                    android:contentDescription="Video">
+                    <ImageView
+                        style="@style/ContactActionIcon"
+                        android:src="@drawable/ic_video" />
+                    <TextView style="@style/ContactActionText" android:text="Video" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/btn_detalle_correo"
+                    style="@style/ContactAction"
+                    android:contentDescription="Correo">
+                    <ImageView
+                        style="@style/ContactActionIcon"
+                        android:src="@drawable/ic_mail" />
+                    <TextView style="@style/ContactActionText" android:text="Correo" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/btn_detalle_whatsapp"
+                    style="@style/ContactAction"
+                    android:contentDescription="WhatsApp">
+                    <ImageView
+                        style="@style/ContactActionIcon"
+                        android:src="@drawable/ic_message" />
+                    <TextView style="@style/ContactActionText" android:text="WhatsApp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView style="@style/DetailSectionTitle" android:text="TELÉFONOS" />
+            <TextView
+                android:id="@+id/detail_phone"
+                style="@style/DetailCardText"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView style="@style/DetailSectionTitle" android:text="CORREOS ELECTRÓNICOS" />
+            <TextView
+                android:id="@+id/detail_email"
+                style="@style/DetailCardText"
+                android:textSize="16sp" />
+
+            <TextView style="@style/DetailSectionTitle" android:text="ORGANIZACIÓN" />
+            <TextView
+                android:id="@+id/detail_company"
+                style="@style/DetailCardText"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/detail_notes"
+                style="@style/DetailCardText"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/bg_search_view"
+                android:text="Notas y recordatorios\nSin notas registradas"
+                android:textColor="#343044"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btn_detalle_compartir"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="22dp"
+                android:text="Compartir contacto"
+                android:textColor="#3525CD" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="48dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btn_detalle_bloquear"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#EEEAFE"
+                    android:drawableStart="@drawable/ic_block"
+                    android:minHeight="56dp"
+                    android:text="Bloquear"
+                    android:textColor="#343044" />
+                <Button
+                    android:id="@+id/btn_detalle_eliminar"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#FFD8D5"
+                    android:drawableStart="@drawable/ic_delete"
+                    android:minHeight="56dp"
+                    android:text="Eliminar"
+                    android:textColor="#B3261E" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

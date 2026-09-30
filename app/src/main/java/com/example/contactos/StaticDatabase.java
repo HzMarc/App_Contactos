@@ -1,5 +1,10 @@
 package com.example.contactos;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+
+import androidx.annotation.NonNull;
+
 final class StaticDatabase {
 
     static final Contact[] CONTACTS = {
@@ -55,6 +60,72 @@ final class StaticDatabase {
     };
 
     private StaticDatabase() {
+    }
+
+    static Contact findContact(@NonNull String contactId) {
+        for (Contact contact : CONTACTS) {
+            if (contact.id.equals(contactId)) {
+                return contact;
+            }
+        }
+        return null;
+    }
+
+    static boolean isDeleted(@NonNull Context context, @NonNull String contactId) {
+        return getOverrides(context).getBoolean("deleted_" + contactId, false);
+    }
+
+    static boolean isBlocked(@NonNull Context context, @NonNull String contactId) {
+        return getOverrides(context).getBoolean("blocked_" + contactId, false);
+    }
+
+    static void setBlocked(
+            @NonNull Context context,
+            @NonNull String contactId,
+            boolean blocked
+    ) {
+        getOverrides(context).edit()
+                .putBoolean("blocked_" + contactId, blocked)
+                .apply();
+    }
+
+    static void setDeleted(@NonNull Context context, @NonNull String contactId) {
+        getOverrides(context).edit()
+                .putBoolean("deleted_" + contactId, true)
+                .apply();
+    }
+
+    static void update(
+            @NonNull Context context,
+            @NonNull String contactId,
+            @NonNull String name,
+            @NonNull String jobTitle,
+            @NonNull String company,
+            @NonNull String phone
+    ) {
+        getOverrides(context).edit()
+                .putString("name_" + contactId, name)
+                .putString("job_" + contactId, jobTitle)
+                .putString("company_" + contactId, company)
+                .putString("phone_" + contactId, phone)
+                .apply();
+    }
+
+    @NonNull
+    static Contact resolve(@NonNull Context context, @NonNull Contact contact) {
+        SharedPreferences preferences = getOverrides(context);
+        return new Contact(
+                contact.id,
+                preferences.getString("name_" + contact.id, contact.name),
+                preferences.getString("job_" + contact.id, contact.jobTitle),
+                preferences.getString("company_" + contact.id, contact.company),
+                preferences.getString("phone_" + contact.id, contact.phone),
+                contact.avatarBackground
+        );
+    }
+
+    private static SharedPreferences getOverrides(@NonNull Context context) {
+        return context.getSharedPreferences("contact_overrides", Context.MODE_PRIVATE);
     }
 
     static final class Contact {

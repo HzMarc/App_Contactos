@@ -1,6 +1,7 @@
 package com.example.contactos;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -81,6 +82,11 @@ public class FavoritosFragment extends Fragment {
 
 
         for (StaticDatabase.Contact contact : StaticDatabase.CONTACTS) {
+
+            if (StaticDatabase.isDeleted(requireContext(), contact.id)) {
+                continue;
+            }
+            contact = StaticDatabase.resolve(requireContext(), contact);
 
             boolean isFavorite = preferences.getBoolean(
                     FAVORITE_PREFIX + contact.id,
@@ -196,7 +202,14 @@ public class FavoritosFragment extends Fragment {
                 R.drawable.ic_phone,
                 "Llamar a " + contact.name
         ));
+        card.setOnClickListener(clickedView -> openContactDetails(contact.id));
         return card;
+    }
+
+    private void openContactDetails(@NonNull String contactId) {
+        Intent intent = new Intent(requireContext(), DetalleContactoActivity.class);
+        intent.putExtra(DetalleContactoActivity.EXTRA_CONTACT_ID, contactId);
+        startActivity(intent);
     }
 
     private View createFavoriteCard(
@@ -228,7 +241,11 @@ public class FavoritosFragment extends Fragment {
         detailsParams.setMargins(dp(10), 0, 0, 0);
         details.setLayoutParams(detailsParams);
         details.addView(createNameView(contact.name, 16));
-        details.addView(createDetailView(contact.jobTitle + " • " + contact.company));
+        String contactDetail = contact.jobTitle + " • " + contact.company;
+        if (StaticDatabase.isBlocked(requireContext(), contact.id)) {
+            contactDetail += " • Bloqueado";
+        }
+        details.addView(createDetailView(contactDetail));
         details.addView(createDetailView(contact.phone));
         card.addView(details);
 

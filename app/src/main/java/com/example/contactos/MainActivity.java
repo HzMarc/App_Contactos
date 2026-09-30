@@ -1,5 +1,6 @@
 package com.example.contactos;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.graphics.Color;
 import android.view.View;
@@ -26,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
     private static final int TAB_GRUPOS = 4;
 
     private ViewPager2 viewPager;
-    private View formContainer;
     private View topBar;
     private TabLayout tabLayout;
     private SearchView searchView;
@@ -39,10 +39,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         viewPager = findViewById(R.id.viewpager);
-        formContainer = findViewById(R.id.form_container);
         topBar = findViewById(R.id.top_bar);
         tabLayout = findViewById(R.id.tabLayout);
         searchView = findViewById(R.id.searchView);
+        findViewById(R.id.imageView2).setOnClickListener(view -> {
+            Intent intent = new Intent(this, DetalleContactoActivity.class);
+            intent.putExtra(DetalleContactoActivity.EXTRA_PROFILE, true);
+            startActivity(intent);
+        });
 
         viewPager.setAdapter(new ViewPagerAdapter(this));
         configureTabs();
@@ -57,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
             public void onPageSelected(int position) {
                 boolean isNewContactPage = position == TAB_NUEVO;
                 topBar.setVisibility(isNewContactPage ? View.GONE : View.VISIBLE);
-                formContainer.setVisibility(View.GONE);
 
                 if (!isNewContactPage) {
                     updateSearchHint(position);

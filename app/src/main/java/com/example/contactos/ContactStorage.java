@@ -66,6 +66,49 @@ final class ContactStorage {
         return contacts;
     }
 
+    static Contact getById(@NonNull Context context, @NonNull String contactId) {
+        for (Contact contact : getAll(context)) {
+            if (contact.id.equals(contactId)) {
+                return contact;
+            }
+        }
+        return null;
+    }
+
+    static void update(
+            @NonNull Context context,
+            @NonNull String contactId,
+            @NonNull String firstName,
+            @NonNull String lastName,
+            @NonNull String phone,
+            @NonNull String email,
+            @NonNull String company,
+            @NonNull String jobTitle
+    ) {
+        getPreferences(context).edit()
+                .putString(contactId, join(
+                        firstName, lastName, phone, email, company, jobTitle
+                ))
+                .apply();
+    }
+
+    static void delete(@NonNull Context context, @NonNull String contactId) {
+        SharedPreferences preferences = getPreferences(context);
+        String ids = preferences.getString(IDS_KEY, "");
+        List<String> remainingIds = new ArrayList<>();
+        if (!ids.isEmpty()) {
+            for (String id : ids.split(SEPARATOR)) {
+                if (!id.equals(contactId)) {
+                    remainingIds.add(id);
+                }
+            }
+        }
+        preferences.edit()
+                .remove(contactId)
+                .putString(IDS_KEY, join(remainingIds.toArray(new String[0])))
+                .apply();
+    }
+
     private static String join(String... fields) {
         StringBuilder value = new StringBuilder();
         for (String field : fields) {
