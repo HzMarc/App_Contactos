@@ -20,8 +20,10 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
             case 1:
                 return new FavoritosFragment();
             case 2:
-                return new RecientesFragment();
+                return new fragment_nuevo_contacto();
             case 3:
+                return new RecientesFragment();
+            case 4:
                 return new GruposFragment();
 
             default:
@@ -31,6 +33,6 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
 
     @Override
     public int getItemCount() {
-        return 4;
+        return 5;
     }
 }

@@ -1,7 +1,9 @@
 package com.example.contactos;
 
 import android.os.Bundle;
+import android.graphics.Color;
 import android.view.View;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +15,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.widget.SearchView;
 
 import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,126 +45,67 @@ public class MainActivity extends AppCompatActivity {
         searchView = findViewById(R.id.searchView);
 
         viewPager.setAdapter(new ViewPagerAdapter(this));
-        addTabs(tabLayout);
+        configureTabs();
         configureNavigation();
         configureSearch();
         configureInsets();
     }
 
     private void configureNavigation() {
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                selectTab(tab.getPosition());
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-                selectTab(tab.getPosition());
-            }
-        });
-
         viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
             public void onPageSelected(int position) {
+                boolean isNewContactPage = position == TAB_NUEVO;
+                topBar.setVisibility(isNewContactPage ? View.GONE : View.VISIBLE);
+                formContainer.setVisibility(View.GONE);
 
-                if (formContainer.getVisibility() == View.VISIBLE) {
-                    return;
+                if (!isNewContactPage) {
+                    updateSearchHint(position);
+                    viewPager.post(() ->
+                            applySearch(searchView.getQuery().toString())
+                    );
                 }
-
-                TabLayout.Tab tab = tabLayout.getTabAt(positionToTab(position));
-
-                if (tab != null && !tab.isSelected()) {
-                    tab.select();
-                }
-
-                updateSearchHint(position);
-
-                viewPager.post(() ->
-                        applySearch(searchView.getQuery().toString())
-                );
             }
         });
     }
 
-    private void selectTab(int tabPosition) {
-        if (tabPosition == TAB_NUEVO) {
-            showNewContactForm();
-            return;
-        }
-
-        showPage(tabToPosition(tabPosition));
-    }
-
-    private void showPage(int pagePosition) {
-        topBar.setVisibility(View.VISIBLE);
-        formContainer.setVisibility(View.GONE);
-        viewPager.setVisibility(View.VISIBLE);
-        if (viewPager.getCurrentItem() != pagePosition) {
-            viewPager.setCurrentItem(pagePosition, true);
-        }
-    }
-
-    private void showNewContactForm() {
-        topBar.setVisibility(View.GONE);
-        viewPager.setVisibility(View.GONE);
-        formContainer.setVisibility(View.VISIBLE);
-
-        Fragment current = getSupportFragmentManager()
-                .findFragmentById(R.id.form_container);
-        if (!(current instanceof fragment_nuevo_contacto)) {
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.form_container, new fragment_nuevo_contacto())
-                    .commit();
-        }
+    private void configureTabs() {
+        new TabLayoutMediator(tabLayout, viewPager, (tab, position) -> {
+            switch (position) {
+                case TAB_CONTACTOS:
+                    tab.setIcon(R.drawable.ic_tab_contacts_filled);
+                    tab.setText("Contactos");
+                    break;
+                case TAB_FAVORITOS:
+                    tab.setIcon(R.drawable.ic_tab_favorite_filled);
+                    tab.setText("Favoritos");
+                    break;
+                case TAB_NUEVO:
+                    tab.setIcon(R.drawable.ic_tab_add_filled);
+                    tab.setText("Nuevo");
+                    break;
+                case TAB_RECIENTES:
+                    tab.setIcon(R.drawable.ic_tab_history_filled);
+                    tab.setText("Recientes");
+                    break;
+                case TAB_GRUPOS:
+                    tab.setIcon(R.drawable.ic_tab_groups_filled);
+                    tab.setText("Grupos");
+                    break;
+                default:
+                    break;
+            }
+        }).attach();
     }
 
     public void showContacts() {
-        TabLayout.Tab contactsTab = tabLayout.getTabAt(TAB_CONTACTOS);
-        if (contactsTab != null) {
-            contactsTab.select();
-        }
-    }
-
-    private int tabToPosition(int tabPosition) {
-        switch (tabPosition) {
-            case TAB_CONTACTOS:
-                return 0;
-            case TAB_FAVORITOS:
-                return 1;
-            case TAB_RECIENTES:
-                return 2;
-            case TAB_GRUPOS:
-                return 3;
-            default:
-                return 0;
-        }
-    }
-
-    private int positionToTab(int pagePosition) {
-        switch (pagePosition) {
-            case 0:
-                return TAB_CONTACTOS;
-            case 1:
-                return TAB_FAVORITOS;
-            case 2:
-                return TAB_RECIENTES;
-            case 3:
-                return TAB_GRUPOS;
-            default:
-                return TAB_CONTACTOS;
-        }
+        viewPager.setCurrentItem(TAB_CONTACTOS, true);
     }
 
     @Override
     public void onBackPressed() {
-        if (formContainer.getVisibility() == View.VISIBLE) {
-            tabLayout.getTabAt(TAB_CONTACTOS).select();
+        if (viewPager.getCurrentItem() == TAB_NUEVO) {
+            viewPager.setCurrentItem(TAB_CONTACTOS, true);
             return;
         }
         super.onBackPressed();
@@ -188,6 +132,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void configureSearch() {
+
+        int searchTextId = getResources().getIdentifier(
+                "search_src_text",
+                "id",
+                "android"
+        );
+        EditText searchText = searchView.findViewById(searchTextId);
+        if (searchText != null) {
+            searchText.setTextColor(Color.BLACK);
+            searchText.setHintTextColor(Color.rgb(111, 105, 139));
+        }
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
 
@@ -242,41 +197,14 @@ public class MainActivity extends AppCompatActivity {
                 searchView.setQueryHint("Buscar favoritos...");
                 break;
 
-            case 2:
+            case TAB_RECIENTES:
                 searchView.setQueryHint("Buscar llamadas...");
                 break;
 
-            case 3:
+            case TAB_GRUPOS:
                 searchView.setQueryHint("Buscar grupos...");
                 break;
         }
     }
 
-    private void addTabs(TabLayout tabLayout) {
-        tabLayout.addTab(
-                tabLayout.newTab()
-                        .setIcon(R.drawable.ic_tab_contacts_filled)
-                        .setText("Contatos")
-        );
-        tabLayout.addTab(
-                tabLayout.newTab()
-                        .setIcon(R.drawable.ic_tab_favorite_filled)
-                        .setText("Favoritos")
-        );
-        tabLayout.addTab(
-                tabLayout.newTab()
-                        .setIcon(R.drawable.ic_tab_add_filled)
-                        .setText("Nuevo")
-        );
-        tabLayout.addTab(
-                tabLayout.newTab()
-                        .setIcon(R.drawable.ic_tab_history_filled)
-                        .setText("Recientes")
-        );
-        tabLayout.addTab(
-                tabLayout.newTab()
-                        .setIcon(R.drawable.ic_tab_groups_filled)
-                        .setText("Grupos")
-        );
-    }
 }
