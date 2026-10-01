@@ -15,6 +15,10 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.activity.OnBackPressedCallback;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 public class DetalleContactoActivity extends AppCompatActivity {
 
@@ -28,6 +32,39 @@ public class DetalleContactoActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_contacto);
+
+        ViewCompat.setOnApplyWindowInsetsListener(
+                findViewById(R.id.main),
+                (view, insets) -> {
+                    Insets systemBars = insets.getInsets(
+                            WindowInsetsCompat.Type.systemBars()
+                    );
+                    view.setPadding(
+                            systemBars.left,
+                            systemBars.top,
+                            systemBars.right,
+                            systemBars.bottom
+                    );
+                    return insets;
+                }
+        );
+
+        View backButton = findViewById(R.id.btn_detalle_atras);
+        backButton.setClickable(true);
+        backButton.setFocusable(true);
+        backButton.bringToFront();
+        backButton.setOnClickListener(v ->
+                getOnBackPressedDispatcher().onBackPressed()
+        );
+        getOnBackPressedDispatcher().addCallback(
+                this,
+                new OnBackPressedCallback(true) {
+                    @Override
+                    public void handleOnBackPressed() {
+                        closeDetail();
+                    }
+                }
+        );
 
         boolean isProfile = getIntent().getBooleanExtra(EXTRA_PROFILE, false);
         String contactId = getIntent().getStringExtra(EXTRA_CONTACT_ID);
@@ -137,7 +174,6 @@ public class DetalleContactoActivity extends AppCompatActivity {
             });
         }
 
-        findViewById(R.id.btn_detalle_atras).setOnClickListener(v -> finish());
     }
 
     private void showEditDialog(@NonNull ContactStorage.Contact contact) {
@@ -278,11 +314,20 @@ public class DetalleContactoActivity extends AppCompatActivity {
     }
 
     private String initials(String name) {
-        String[] parts = name.trim().split("\\s+");
+        String cleanName = name == null ? "" : name.trim();
+        if (cleanName.isEmpty()) {
+            return "?";
+        }
+
+        String[] parts = cleanName.split("\\s+");
         if (parts.length == 1) {
             return parts[0].substring(0, 1).toUpperCase();
         }
         return (parts[0].substring(0, 1) + parts[parts.length - 1].substring(0, 1))
                 .toUpperCase();
+    }
+
+    private void closeDetail() {
+        finish();
     }
 }
